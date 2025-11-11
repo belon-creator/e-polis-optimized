@@ -1,0 +1,56 @@
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+
+.descr-heading {
+  font-size: 26px;
+}
+
+.banner {
+  background-color: #fff;
+}
+
+.banner .container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.how-to-use-descr {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+}
+
+.international-ins {
+  width: 100%;
+}
+
+.countries {
+  padding: 8px;
+  min-height: 300px;
+  background-image: url(../img/eu.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gc-txt {
+  background-color: rgba(255, 255, 255, 0.4);
+  font-weight: bold;
+  margin: 0;
+  padding-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .banner-btn-txt-descr {
+    max-width: 60%;
+  }
+
+  .how-to-use-list-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .how-to-use-txt {
+    text-align: center;
+  }
+}

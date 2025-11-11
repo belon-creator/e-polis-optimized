@@ -1,0 +1,19 @@
+.descr-txt {
+  text-align: center;
+  font-weight: bold;
+}
+
+.package {
+  color: #dddada;
+  display: block;
+  padding: 16px;
+}
+
+.package h3 {
+  text-align: center;
+  color: #fff;
+}
+
+.package li {
+  font-style: italic;
+}

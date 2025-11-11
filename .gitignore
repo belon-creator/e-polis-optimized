@@ -1,0 +1,32 @@
+# Node modules (залежності, встановлені npm/yarn)
+node_modules/
+
+# Prettier конфігураційні файли
+.prettierrc
+.prettierrc.json
+.prettierrc.yml
+.prettierrc.yaml
+.prettierrc.js
+prettier.config.js
+
+# Локальні налаштування редактора
+.vscode/
+
+# Логи
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Кеш файли
+*.cache
+*.log
+
+# Системні файли
+.DS_Store
+Thumbs.db
+
+# Інші локальні файли
+.env
+.idea/
+*.local
+*.env

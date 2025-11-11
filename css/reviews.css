@@ -1,0 +1,132 @@
+/* reviews-new.css */
+
+.epolis-review-section {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f2f8ff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 100, 0.1);
+  font-family: sans-serif;
+}
+
+.epolis-review-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2a3b8e;
+}
+.epolis-form-title {
+  text-align: center;
+  margin-top: 40px;
+  color: #2a3b8e;
+}
+
+#epolis-average-rating-container {
+  margin-bottom: 16px;
+}
+
+#epolis-review-form input,
+#epolis-review-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+/* Стилі для зірок у формі */
+.epolis-rating-stars-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.epolis-rating-stars-container span {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+/* Застосовується до обраних та hovered зірок у формі */
+.epolis-rating-stars-container span.selected,
+.epolis-rating-stars-container span.hovered,
+.epolis-rating-stars-container span.hovered ~ span {
+  color: gold;
+}
+
+#epolis-review-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #3d5afe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#epolis-review-form button:hover {
+  background-color: #2a3b8e;
+}
+
+#epolis-form-message {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  color: red;
+}
+
+#epolis-form-message.success {
+  color: green;
+}
+
+/* Стилі для відображення відгуків */
+#epolis-reviews-container {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.epolis-review-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.epolis-review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.epolis-reviewer-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.epolis-stars-visual {
+  font-size: 20px;
+}
+
+.epolis-stars-visual span.selected {
+  color: gold;
+}
+
+.epolis-review-text {
+  font-style: italic;
+  color: #555;
+  margin: 0;
+}
+
+
+@media (max-width: 767px) {
+  .epolis-review-section {
+    padding: 20px 8px;
+    max-width: 100%;
+    margin: 0 auto;
+  }}

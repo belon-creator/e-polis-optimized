@@ -1,0 +1,59 @@
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+
+/* Скидання стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Контейнер */
+body {
+  font-family: sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 20px;
+}
+/* Текст */
+p {
+  margin-bottom: 20px;
+}
+
+/* Списки */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Пункти списків */
+.check-item {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Класи для секцій */
+.steps {
+  background-color: #f7f7f7;
+}
+
+.benefits {
+  background-color: #fafafa;
+}

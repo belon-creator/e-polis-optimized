@@ -1,0 +1,72 @@
+/* Скидання стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Контейнер */
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок */
+.main-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Вступний текст */
+.intro {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Розділи */
+.section-title {
+  font-size: 20px;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* Списки */
+.list {
+  /* list-style: disc; */
+  padding-left: 20px;
+}
+
+/* Пункти списку */
+.list-item {
+  margin-bottom: 10px;
+}
+
+/* Підзаголовки */
+.sub-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Приклад */
+.example {
+  margin-top: 10px;
+}
+
+/* Висновок */
+.conclusion {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Зображення */
+.image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}

@@ -1,0 +1,78 @@
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+/* Скидання стилів */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.travel-page {
+  width: 90%;
+}
+/* Контейнер */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Заголовок */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Текст */
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Списки */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Пункти списків */
+.travel-list-item {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Класи для списків */
+.reasons li {
+  background-color: #f7f7f7;
+}
+
+.risks li {
+  background-color: #fafafa;
+}
+
+.tips li {
+  background-color: #fbfbfb;
+}
+
+.options li {
+  background-color: #fcfcfc;
+}
+
+.recommendations li {
+  background-color: #fdfdfd;
+}
+
+.banner {
+  padding-top: 20px;
+}

@@ -1,0 +1,20 @@
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.container {
+  padding: 20px;
+}
+
+.btn-txt {
+  text-align: center;
+}

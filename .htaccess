@@ -1,0 +1,90 @@
+# =====================================
+# 🌐 КАНОНІЧНІ РЕДИРЕКТИ
+# =====================================
+RewriteEngine On
+
+# Примусовий HTTPS і видалення www
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^ https://e-polis.net.ua%{REQUEST_URI} [L,R=301]
+
+# =====================================
+# ⚡ КЕШУВАННЯ СТАТИЧНИХ РЕСУРСІВ
+# =====================================
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML — 1 день
+    ExpiresByType text/html "access plus 1 day"
+
+    # CSS та JS — 1 місяць
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+
+    # Зображення — 1 рік
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
+
+    # Шрифти — 1 рік
+    ExpiresByType font/ttf "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# =====================================
+# 🧭 CACHE-CONTROL HEADERS
+# =====================================
+<IfModule mod_headers.c>
+    # Статичні файли — кеш на 1 рік
+    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|css|js|woff|woff2|ttf)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # HTML — лише на 1 день
+    <FilesMatch "\.(html|htm|xml|txt|json)$">
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>
+
+# =====================================
+# 🧱 СТИСНЕННЯ GZIP / BROTLI
+# =====================================
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+    BrotliCompressionQuality 5
+    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+# =====================================
+# 🔐 БЕЗПЕКА І ПОЛІТИКИ
+# =====================================
+<IfModule mod_headers.c>
+    Header always append X-Frame-Options SAMEORIGIN
+    Header set X-Content-Type-Options nosniff
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# =====================================
+# 🚀 CDN / FACEBOOK КЕШ
+# =====================================
+<IfModule mod_headers.c>
+    # Дозволяємо кешувати скрипти з CDN (jsdelivr, facebook, google)
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
+    </FilesMatch>
+</IfModule>
+
+# =====================================
+# 🚫 ЗАБОРОНА ІНДЕКСУВАННЯ ДИРЕКТОРІЙ
+# =====================================
+Options -Indexes
+ServerSignature Off

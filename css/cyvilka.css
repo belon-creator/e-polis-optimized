@@ -1,0 +1,66 @@
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+
+.banner {
+  background-color: #fff;
+}
+
+.how-to-use-descr {
+  font-size: 14px;
+  font-style: italic;
+  color: #fff;
+}
+
+.how-to-use-txt {
+  font-size: 20px;
+}
+
+.how-to-use-txt-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.questions-list {
+  margin-top: 40px;
+}
+
+.questions-list-item {
+  margin: 8px;
+  padding: 12px;
+  background-color: var(--accent-color);
+  color: #fff;
+  border-radius: 8px;
+}
+
+.questions-list-heading {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+.questions-list-descr {
+  text-align: left;
+  color: #e0dfdf;
+  font-style: italic;
+  line-height: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .how-to-use-list-item {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+  }
+
+  .how-to-use-txt {
+    text-align: center;
+  }
+
+  .btn-txt {
+    text-align: center;
+  }
+}
+
+
+

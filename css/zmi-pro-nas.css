@@ -1,0 +1,99 @@
+/* css/media-section.css */
+
+.epolis-media-section {
+    padding: 60px 0;
+    background-color: #f7f7f7;
+    /* Важливо: додаємо overflow-x: hidden, щоб приховати горизонтальну прокрутку */
+    overflow-x: hidden;
+}
+
+.epolis-media-slider {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 50px;
+
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Переконаємось, що swiper-wrapper - це флекс-контейнер */
+.swiper-wrapper {
+    display: flex;
+    list-style: none; /* Видаляємо маркери */
+    margin: 0;       /* Видаляємо зовнішні відступи */
+    padding: 0;      /* Видаляємо внутрішні відступи */
+}
+
+.swiper-slide {
+    margin: 0;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+}
+
+.epolis-media-card {
+    min-height: 400px;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.epolis-media-card:hover {
+    transform: translateY(-5px);
+}
+
+.epolis-media-card a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.epolis-media-image-wrapper {
+    width: 100%;
+    height: 180px; 
+    overflow: hidden;
+}
+
+.epolis-media-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.epolis-media-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 15px 15px 5px;
+    color: #333;
+}
+
+.epolis-media-excerpt {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0 15px 15px;
+    flex-grow: 1; 
+}
+
+.epolis-media-read-more {
+    display: inline-block;
+    color: #007bff;
+    font-weight: 600;
+    padding: 0 15px 15px;
+}
+
+/* Стилі для Swiper */
+.swiper-button-next, .swiper-button-prev {
+    color: #007bff;
+}
+
+.swiper-pagination {
+    display: none;
+}
+

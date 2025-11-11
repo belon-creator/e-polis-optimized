@@ -1,0 +1,152 @@
+body {
+  background-image: url(../img/bg-e-polis.png);
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+p {
+  line-height: 20px;
+}
+
+ul {
+  padding: 16px;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.container {
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 16px;
+  padding-left: 16px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.med-banner {
+  padding-top: 0;
+}
+
+.descr-txt {
+  text-align: center;
+  font-weight: bold;
+}
+
+.advantages-list-item,
+.exclusion-list-item {
+  margin: 0px;
+}
+
+.advantages-list-item > h3 {
+  text-align: center;
+}
+
+.advantages-list-item > p {
+  color: var(--primary-bg);
+  margin: 2px;
+}
+
+.table {
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.t-data {
+  margin: 0;
+  padding: 8px;
+  border: 1px solid black;
+}
+
+.med-nav-txt {
+  text-align: center;
+  font-weight: bold;
+  color: #3b3b3b;
+}
+
+.contacts .container {
+  border: 1px solid #c0c0c0;
+  border-radius: 8px;
+  box-shadow: 4px 4px 5px 0px rgba(138, 126, 126, 0.75);
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(138, 126, 126, 0.75);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(138, 126, 126, 0.75);
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.med-nav-contacts {
+  display: flex;
+  justify-content: center;
+}
+
+.frame {
+  background-color: var(--secondary-bg);
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 2px 2px 8px -1px rgba(43, 43, 197, 0.8);
+  -webkit-box-shadow: 2px 2px 8px -1px rgba(43, 43, 197, 0.8);
+  -moz-box-shadow: 2px 2px 8px -1px rgba(43, 43, 197, 0.8);
+}
+
+.form {
+  text-align: center;
+}
+
+.red-txt {
+  color: red;
+}
+
+.slider {
+  width: 100%; /* Ширина слайдера на всю ширину екрану */
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 500%; /* Ширина слайдів - 5 разів ширина слайдера, для відображення всіх слайдів одночасно */
+}
+
+.slide {
+  flex-shrink: 0;
+  width: 20%; /* Кожен слайд займає 20% ширини слайдера */
+  background-color: rgba(43, 43, 197, 0.8);
+  color: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 2px 2px 8px -1px rgba(43, 43, 197, 0.8);
+  -webkit-box-shadow: 2px 2px 8px -1px rgba(43, 43, 197, 0.8);
+  -moz-box-shadow: 2px 2px 8px -1px rgba(43, 43, 197, 0.8);
+}
+
+.btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border: none;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
