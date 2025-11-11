@@ -1,90 +1,81 @@
-# =====================================
-# 🌐 КАНОНІЧНІ РЕДИРЕКТИ
-# =====================================
+# Увімкнути Rewrite Engine
 RewriteEngine On
 
-# Примусовий HTTPS і видалення www
+# ============================
+# 🔁 Редирект www → без www + HTTPS
+# ============================
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^ https://e-polis.net.ua%{REQUEST_URI} [L,R=301]
 
-# =====================================
-# ⚡ КЕШУВАННЯ СТАТИЧНИХ РЕСУРСІВ
-# =====================================
+# ============================
+# ⚡ Кешування статичних файлів (1 рік)
+# ============================
 <IfModule mod_expires.c>
-    ExpiresActive On
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
 
-    # HTML — 1 день
-    ExpiresByType text/html "access plus 1 day"
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/avif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
 
-    # CSS та JS — 1 місяць
-    ExpiresByType text/css "access plus 1 month"
-    ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType application/x-javascript "access plus 1 year"
+  ExpiresByType application/json "access plus 1 month"
 
-    # Зображення — 1 рік
-    ExpiresByType image/jpeg "access plus 1 year"
-    ExpiresByType image/jpg "access plus 1 year"
-    ExpiresByType image/png "access plus 1 year"
-    ExpiresByType image/webp "access plus 1 year"
-    ExpiresByType image/gif "access plus 1 year"
-    ExpiresByType image/svg+xml "access plus 1 year"
-    ExpiresByType image/x-icon "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+  ExpiresByType application/font-woff2 "access plus 1 year"
+  ExpiresByType application/vnd.ms-fontobject "access plus 1 year"
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
 
-    # Шрифти — 1 рік
-    ExpiresByType font/ttf "access plus 1 year"
-    ExpiresByType font/woff "access plus 1 year"
-    ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 1 day"
 </IfModule>
 
-# =====================================
-# 🧭 CACHE-CONTROL HEADERS
-# =====================================
-<IfModule mod_headers.c>
-    # Статичні файли — кеш на 1 рік
-    <FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|ico|css|js|woff|woff2|ttf)$">
-        Header set Cache-Control "public, max-age=31536000, immutable"
-    </FilesMatch>
-
-    # HTML — лише на 1 день
-    <FilesMatch "\.(html|htm|xml|txt|json)$">
-        Header set Cache-Control "public, max-age=86400"
-    </FilesMatch>
-</IfModule>
-
-# =====================================
-# 🧱 СТИСНЕННЯ GZIP / BROTLI
-# =====================================
+# ============================
+# 🗜️ GZIP-компресія
+# ============================
 <IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/javascript application/json image/svg+xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE font/ttf
+  AddOutputFilterByType DEFLATE font/otf
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
 </IfModule>
 
-<IfModule mod_brotli.c>
-    BrotliCompressionQuality 5
-    AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
-</IfModule>
-
-# =====================================
-# 🔐 БЕЗПЕКА І ПОЛІТИКИ
-# =====================================
+# ============================
+# 🔒 Безпека + продуктивність
+# ============================
 <IfModule mod_headers.c>
-    Header always append X-Frame-Options SAMEORIGIN
-    Header set X-Content-Type-Options nosniff
-    Header set Referrer-Policy "strict-origin-when-cross-origin"
-    Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-XSS-Protection "1; mode=block"
+  Header set Referrer-Policy "no-referrer-when-downgrade"
+  Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header unset ETag
 </IfModule>
 
-# =====================================
-# 🚀 CDN / FACEBOOK КЕШ
-# =====================================
-<IfModule mod_headers.c>
-    # Дозволяємо кешувати скрипти з CDN (jsdelivr, facebook, google)
-    <FilesMatch "\.(js|css)$">
-        Header set Cache-Control "public, max-age=604800, stale-while-revalidate=86400"
-    </FilesMatch>
-</IfModule>
+FileETag None
 
-# =====================================
-# 🚫 ЗАБОРОНА ІНДЕКСУВАННЯ ДИРЕКТОРІЙ
-# =====================================
-Options -Indexes
-ServerSignature Off
+# ============================
+# 🧭 Для SPA (React, Vue, Angular)
+# — якщо потрібно, щоб працювали внутрішні маршрути
+# ============================
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ index.html [L]
