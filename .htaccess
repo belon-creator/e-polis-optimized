@@ -4,6 +4,7 @@ RewriteEngine On
 # ============================
 # 🔁 Редирект www → без www + HTTPS
 # ============================
+RewriteEngine On # Обов'язково
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://e-polis.net.ua/$1 [L,R=301]
