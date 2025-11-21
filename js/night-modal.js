@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const uaTime = getUkraineTime();
 
     // Показуємо тільки між 23:00 і 23:59
-    if (uaTime.hour === 13) {
+    if (uaTime.hour === 23) {
       modal.style.display = 'flex';
     }
   }
