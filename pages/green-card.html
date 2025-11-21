@@ -35,6 +35,16 @@
     <link rel="stylesheet" href="../css/main-page-minified.css" />
     <link rel="stylesheet" href="../css/pages-minified.css" />
 
+     <link
+      rel="preload"
+      href="../css/night-modal.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="../css/night-modal.css" />
+    </noscript> 
+
     <link
       rel="shortcut icon"
       href="../img/favicon-e-polis.jpeg"
@@ -43,8 +53,8 @@
 
     <style>
       .international-ins {
-  width: 100%;
-}
+        width: 100%;
+      }
       .seo-content {
         margin-top: 60px;
         padding-bottom: 60px;
@@ -959,6 +969,38 @@
       <p class="copy">&copy; Всі права захищені</p>
     </footer>
 
+    <div id="nightModal" class="night-modal">
+      <div class="night-modal-content">
+        <span class="night-modal-close">&times;</span>
+        <h2>Зверніть увагу</h2>
+
+        <img
+          src="../img/car-with-man-removebg-preview.webp"
+          alt="warning"
+          width="300"
+        />
+
+        <p>
+          Для коректного укладання поліса, його потрібно сплатити сьогодні до
+          23:50. <br />Або поверніться до оформлення після 00:01
+        </p>
+
+        <button
+          style="
+            width: 80%;
+            height: 30px;
+            border-radius: 16px;
+            background-color: #eff308;
+            border: none;
+            cursor: pointer;
+          "
+          class="night-modal-ok"
+        >
+          ОК
+        </button>
+      </div>
+    </div>
+
     <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
@@ -975,7 +1017,7 @@
 
     <script src="../js/reviews.js" defer></script>
     <script type="module" src="../js/media-slider.js" defer></script>
-            <script type="module" src="../js/minified-main.js"></script>
-
+    <script type="module" src="../js/minified-main.js"></script>
+    <script type="module" src="../js/night-modal.js" defer></script>
   </body>
 </html>
