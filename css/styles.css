@@ -272,6 +272,8 @@ burger
 
 .banner-btn {
   all: initial;
+  box-sizing: border-box; /* ОБОВ'ЯЗКОВО повертаємо правильний розрахунок ширини */
+  display: block;
   margin: 8px;
   cursor: pointer;
   padding: 8px;
@@ -349,25 +351,31 @@ burger
 /* Контейнер для нових трьох кнопок */
 .banner-row-new {
   display: flex;
-  gap: 20px;            /* Відстань між кнопками */
-  margin-top: 20px;     /* Відступ від попереднього блоку кнопок */
+  flex-wrap: wrap;       /* Дозволяємо перенос, щоб не тиснуло в один ряд */
+  gap: 20px;            /* Відстань регулюється тільки тут */
+  margin-top: 20px;
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Кожна нова кнопка в десктопі займає порівну місця */
+/* 3. Налаштування кнопок всередині нового ряду */
 .banner-row-new .banner-btn {
-  flex: 1; 
-  min-width: 0;         /* Запобігає виходу за межі */
+  flex: 1 1 calc(33.333% - 20px); /* Розрахунок 3 в ряд з урахуванням gap */
+  min-width: 280px;               /* Щоб на вузьких екранах вони не ставали надто тонкими */
+  margin: 0;                      /* Прибираємо margin, бо є gap у батька */
 }
 
-/* Адаптивність для смартфонів */
+/* 4. Адаптивність для смартфонів */
 @media (max-width: 768px) {
   .banner-row-new {
-    flex-direction: column; /* Стають одна під одну */
+    flex-direction: column;
+    gap: 12px;
   }
   
   .banner-row-new .banner-btn {
     width: 100%;
+    min-width: 100%;
+    margin: 0;
   }
 }
 
@@ -435,21 +443,21 @@ url(../img/autumn-removebg-preview.webp); #f5b049 осінь
 }
 
 .property{
-  background-image: url(../img/test-img-for-gc.webp),
+  background-image: url(../img/property.webp),
     url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 10px center, top center;
 }
 
 .health{
-  background-image: url(../img/test-img-for-gc.webp),
+  background-image: url(../img/health.webp),
     url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 10px center, top center;
 }
 
 .weapon{
-  background-image: url(../img/test-img-for-gc.webp),
+  background-image: url(../img/weapon.webp),
     url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 10px center, top center;
