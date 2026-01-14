@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Медичне страхування при ДТП | Страховка водія</title>
+    <meta name="description" content="Оформіть медичну страховку на випадок ДТП від ПЗУ Україна. Виплати до 500 000 грн, покриття для водіїв, пасажирів та пішоходів. Без франшизи.">
+    <link
+      rel="shortcut icon"
+      href="/img/favicon-e-polis.jpeg"
+      type="image/x-icon"
+    />
+
+    <meta property="og:image" content="https://www.e-polis.net.ua/fb-banner-new" />
+
+    <link rel="stylesheet" href="../css/main-page-minified.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /* max-width: 1000px; */
+            margin: 0 auto;
+            /* padding: 20px; */
+            background-color: #f4f7f9;
+        }
+        .sub-header {
+            background-color: #004a99;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        h1 { margin: 0; font-size: 2.5em; }
+        h2 { color: #004a99; border-bottom: 2px solid #004a99; padding-bottom: 10px; margin-top: 40px; }
+        .benefit-card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th { background-color: #004a99; color: white; }
+        tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        .cta-container {
+            text-align: center;
+            margin: 50px 0;
+            padding: 30px;
+            background: #e7f3ff;
+            border-radius: 12px;
+        }
+        .btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 18px 35px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background 0.3s;
+            display: inline-block;
+        }
+        .btn:hover { background-color: #e65c00; }
+        
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        .step-num {
+            background: #004a99;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+            border-top: 1px solid #ccc;
+            padding-top: 20px;
+        }
+        .important-note {
+            background: #fff3cd;
+            padding: 15px;
+            border-left: 5px solid #ffecb5;
+            margin: 20px 0;
+        }
+
+        /* Стилі модального вікна */
+.modal-overlay {
+    display: none; /* Сховано за замовчуванням */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Стилізація списку контактів у модалці */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.questions {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 20px 0;
+    color: #004a99;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+    </style>
+
+    <script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Медичне страхування при ДТП | Страховка водія",
+    "url": "https://www.e-polis.net.ua/",
+    "description": "Оформіть медичну страховку на випадок ДТП від ПЗУ Україна. Виплати до 500 000 грн, покриття для водіїв, пасажирів та пішоходів. Без франшизи.",
+    "brand": {
+      "@type": "Organization",
+      "name": "E-polis",
+      "url": "https://www.e-polis.net.ua/"
+    },
+    "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "bestRating": "5",
+      "reviewCount": "121"
+    },
+    "category": [
+      "Автоцивілка",
+      "КАСКО",
+      "Зелена карта"
+    ],
+    "offers": {
+      "@type": "AggregateOffer",
+      "offerCount": "3",
+      "lowPrice": "480",
+      "highPrice": "2000",
+      "priceCurrency": "UAH",
+      "url": "https://www.e-polis.net.ua/"
+    }
+  }
+]
+</script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MBW4467X');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js',
+      );
+      fbq('init', '374096575283289');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=374096575283289&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+<body>
+
+     <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBW4467X"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="hdr">
+      <nav class="hdr-nav">
+        <a href="https://www.e-polis.net.ua/">
+          <img
+            class="logo"
+            src="../img/e-polis-logo.svg"
+            alt="лого є-поліс"
+            width="80px"
+          />
+        </a>
+
+        <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+
+        <div class="menu">
+          <ul class="list nav-list">
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:support@e-polis.net.ua"
+                ><img
+                  class="contact-logo"
+                  src="../img/free-icon-gmail-732200.webp"
+                  alt="пошта"
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                href="https://t.me/epolis_ua"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><img
+                  class="contact-logo"
+                  src="../img/free-icon-telegram-2111646.webp"
+                  alt="телеграм"
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="viber://chat/?number=%2B380679170849">
+                <img
+                  class="contact-logo"
+                  src="../img/free-icon-viber-3670059.webp"
+                  alt="вайбер "
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="https://wa.me/380679170849">
+                <img
+                  class="contact-logo"
+                  src="../img/whatsapp.svg"
+                  alt="whatsapp "
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                href="https://www.facebook.com/profile.php?id=61553156706888"
+              >
+                <img
+                  class="contact-logo"
+                  src="../img/free-icon-facebook-145802.webp"
+                  alt="facebook "
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng==
+            "
+              >
+                <img
+                  class="contact-logo"
+                  src="../img/free-icon-instagram-2111463.webp"
+                  alt="facebook "
+                  width="32px"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+<main>
+    <div class="container">
+    <div class="sub-header">
+    <h1>Медичне страхування при ДТП</h1>
+    <p style="color: #ccc;">Ваш надійний фінансовий захист на дорогах України</p>
+</div>
+
+<section>
+    <p>Дорожньо-транспортна пригода — це завжди стрес та непередбачувані витрати. Програма <strong>«Медичне страхування при ДТП»</strong> від ПрАТ СК «ПЗУ Україна» створена, щоб ви могли отримати професійну допомогу без фінансового тягаря в критичний момент.</p>
+    
+    
+</section>
+
+<section>
+    <h2>Чому обирають нас?</h2>
+    <div class="grid">
+        <div class="benefit-card">
+            <strong>✓ Без франшизи</strong><br>
+            Ви отримуєте повне відшкодування без додаткових витрат.
+        </div>
+        <div class="benefit-card">
+            <strong>✓ Універсальність</strong><br>
+            Не важливо ким була застрахована людина під час ДТП - водієм, пішоходом чи велосипедистом.
+        </div>
+        <div class="benefit-card">
+            <strong>✓ Турбота про дітей</strong><br>
+            Покриття діє для дітей від народження (в автокріслах).
+        </div>
+        <div class="benefit-card">
+            <strong>✓ Гнучкі ліміти</strong><br>
+            Оберіть суму захисту від 100 000 до 500 000 грн.
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Варіанти страхового покриття</h2>
+    <p>Виберіть оптимальний рівень захисту, який відповідає вашим потребам:</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Варіант захисту</th>
+                <th>Загальна сума (грн)</th>
+                <th>Вартість поліса</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Захист 100 000</td>
+                <td>100 000</td>
+                <td>480 грн</td>
+            </tr>
+            <tr>
+                <td>Захист 200 000</td>
+                <td>200 000</td>
+                <td>920 грн</td>
+            </tr>
+            <tr>
+                <td>Захист 300 000</td>
+                <td>300 000</td>
+                <td>1320 грн</td>
+            </tr>
+            <tr>
+                <td>Захист 400 000</td>
+                <td>400 000</td>
+                <td>1680 грн</td>
+            </tr>
+            <tr>
+                <td>Захист 500 000</td>
+                <td>500 000</td>
+                <td>2000 грн</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Що покриває страховка?</h2>
+    <ul>
+        <li><strong>Екстрена медична допомога:</strong> виклик бригади на місце ДТП.</li>
+        <li><strong>Стаціонарне лікування:</strong> повна невідкладна госпіталізація.</li>
+        <li><strong>Медикаменти:</strong> забезпечення ліками під час амбулаторного та стаціонарного лікування.</li>
+        <li><strong>Стоматологія:</strong> невідкладна допомога при травмах, отриманих внаслідок ДТП.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Як діяти при настанні страхового випадку?</h2>
+    <div class="process-step">
+        <div class="step-num">1</div>
+        <div><strong>Зв’яжіться з Асистансом:</strong> Негайно зателефонуйте за номером, вказаним у вашому договорі.</div>
+    </div>
+    <div class="process-step">
+        <div class="step-num">2</div>
+        <div><strong>Надайте інформацію:</strong> Повідомте номер договору, ПІБ та опис події.</div>
+    </div>
+    <div class="process-step">
+        <div class="step-num">3</div>
+        <div><strong>Отримайте допомогу:</strong> Дотримуйтесь інструкцій координатора для направлення у медзаклад.</div>
+    </div>
+    
+    
+</section>
+
+<div class="important-note">
+    <strong>Зверніть увагу:</strong> Страховий захист не поширюється на випадки керування у стані сп'яніння, використання електросамокатів або ДТП на територіях, де органи влади тимчасово не здійснюють повноваження.
+</div>
+
+<div class="cta-container">
+    <h2>Ваш спокій на дорозі починається тут</h2>
+    <p>Оформіть договір онлайн за 5 хвилин та подорожуйте впевнено.</p>
+    <a href="#" class="btn">ОФОРМИТИ СТРАХОВКУ ЗАРАЗ</a>
+</div>
+
+<img src="../img/fb-banner-new.webp" alt="epolis">
+</div>
+
+<div class="menu-toggle-operator operator">
+        <img src="../img/operator.webp" alt="підтримка" width="100%" />
+      </div> 
+</main>
+
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        
+        <nav class="hdr-nav ftr-nav">
+            <img loading="lazy" class="logo ftr-logo" src="../img/e-polis-logo.svg" alt="лого є-поліс" width="80px" />
+
+            <p class="questions">
+                Для оформлення та консультацій напишіть нам
+            </p>
+
+            <ul class="list nav-list" id="contacts">
+                <li>
+                    <a href="viber://chat/?number=%2B380679170849">
+                        <img loading="lazy" class="contact-logo ftr-contact-logo" src="../img/free-icon-viber-3670059.webp" alt="вайбер" width="32px" />
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="mailto:support@e-polis.net.ua">
+                        <img loading="lazy" class="contact-logo ftr-contact-logo" src="../img/free-icon-gmail-732200.webp" alt="пошта" width="32px" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://t.me/epolis_ua" target="_blank" rel="noopener noreferrer">
+                        <img loading="lazy" class="contact-logo ftr-contact-logo" src="../img/free-icon-telegram-2111646.webp" alt="телеграм" width="32px" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://wa.me/380679170849">
+                        <img loading="lazy" class="contact-logo ftr-contact-logo" src="../img/whatsapp.svg" alt="whatsapp" width="32px" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng==">
+                        <img loading="lazy" class="contact-logo ftr-contact-logo" src="../img/free-icon-instagram-2111463.webp" alt="instagram" width="32px" />
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61553156706888">
+                        <img loading="lazy" class="contact-logo ftr-contact-logo" src="../img/free-icon-facebook-145802.webp" alt="facebook" width="32px" />
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+
+<footer class="ftr">
+      <nav class="hdr-nav ftr-nav">
+        <img
+          loading="lazy"
+          class="logo ftr-logo"
+          src="../img/e-polis-logo.svg"
+          alt="лого є-поліс"
+          width="80px"
+        />
+
+        <p style="color: #333;" class="questions">
+          Залишились запитання? <br />
+          Ми завжди на зв'язку
+        </p>
+
+        <ul class="list nav-list" id="contacts">
+          <li>
+            <a href="viber://chat/?number=%2B380679170849">
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-viber-3670059.webp"
+                alt="вайбер "
+                width="32px"
+            /></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:support@e-polis.net.ua"
+              ><img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-gmail-732200.webp"
+                alt="пошта"
+                width="32px"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://t.me/epolis_ua"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-telegram-2111646.webp"
+                alt="телеграм"
+                width="32px"
+            /></a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/380679170849">
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/whatsapp.svg"
+                alt="whatsapp "
+                width="32px"
+            /></a>
+          </li>
+
+          <li>
+            <a
+              href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng==
+            "
+            >
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-instagram-2111463.webp"
+                alt="telegram"
+                width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553156706888">
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-facebook-145802.webp"
+                alt="facebook "
+                width="32px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nbu-links-container">
+        <ul class="list">
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/contacts.html"
+              >Про нас</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/info-pro-poserednyka.html"
+              >Інформація про страхового посередника</a
+            ></ll
+          >
+          <ll
+            ><a target="_blank"
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.pzu.com.ua/about/public-info/informaciya-pro-strahovyka.html"
+              >Інформація про страховика</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/polityka-konfiencijnosti.html"
+              >Політика конфіденційності</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/publichna-oferta.html"
+              >Публічна оферта</a
+            ></ll
+          >
+          <li>
+            <a style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/Інформ. документ_МС при ДТП_2025.pdf">Інформаційний документ МС при ДТП</a>
+          </li>
+
+          <li>
+            <a target="_blank" style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/inform-dok-MS-pry-DTP-2025 (1).pdf">Інформація про стандартний страховий продукт</a>
+          </li>
+
+          <li>
+            <a target="_blank" style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/oferta-ZUSP-MS-pry-DTP-2025.pdf">Оферта МС при ДТП</a>
+          </li>
+        </ul>
+      </div>
+
+      <p class="copy">&copy; Всі права захищені</p>
+    </footer>
+
+    <script type="module" src="../js/minified-main.js"></script>
+
+    <script>
+    const modal = document.getElementById('contactModal');
+    const openBtn = document.querySelector('.btn'); // Кнопка "Оформити зараз"
+    const closeBtn = document.querySelector('.close-modal');
+
+    // Відкрити модалку
+    openBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Щоб сторінка не стрибала вгору через href="#"
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Заборонити прокрутку фону
+    });
+
+    // Закрити модалку через кнопку "X"
+    closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    // Закрити модалку, якщо клікнули на темний фон поза вікном
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+</script>
+
+</body>
+</html>

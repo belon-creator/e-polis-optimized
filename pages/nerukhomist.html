@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страхування житла «Все включено» |  Epolis</title>
+    <meta
+      name="description"
+      content="Комплексне страхування майна від ARX: захист квартири, ремонту та техніки. Покриття військових ризиків, затоплень, пожеж та відповідальності перед сусідами. Оформлення онлайн."
+    />
+    <link
+      rel="shortcut icon"
+      href="/img/favicon-e-polis.jpeg"
+      type="image/x-icon"
+    />
+
+    <meta
+      property="og:image"
+      content="https://www.e-polis.net.ua/fb-banner-new"
+    />
+
+    <link rel="stylesheet" href="../css/main-page-minified.css" />
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0 auto;
+        background-color: #f4f7f9;
+      }
+      .sub-header {
+        background-color: #004a99;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 2.2em;
+      }
+      h2 {
+        color: #004a99;
+        border-bottom: 2px solid #004a99;
+        padding-bottom: 10px;
+        margin-top: 40px;
+      }
+      .benefit-card {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+      }
+      .cta-container {
+        text-align: center;
+        margin: 50px 0;
+        padding: 30px;
+        background: #e7f3ff;
+        border-radius: 12px;
+      }
+      .btn {
+        background-color: #ff6600;
+        color: white;
+        padding: 18px 35px;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: background 0.3s;
+        display: inline-block;
+      }
+      .btn:hover {
+        background-color: #e65c00;
+      }
+      .important-note {
+        background: #fff3cd;
+        padding: 15px;
+        border-left: 5px solid #ffecb5;
+        margin: 20px 0;
+      }
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+      }
+      .modal-content {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        max-width: 400px;
+        width: 90%;
+        position: relative;
+        text-align: center;
+      }
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+      .nav-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+    </style>
+
+      <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Страхування житла",
+          "url": "https://www.e-polis.net.ua/",
+          "description": "Комплексне страхування майна — це реальний спосіб захистити квартиру, приватний будинок, ремонт, меблі та техніку від непередбачуваних ситуацій. Більше не потрібно хвилюватися через пожежі, затоплення, крадіжки чи стихійні лиха.",
+          "brand": {
+            "@type": "Organization",
+            "name": "E-polis",
+            "url": "https://www.e-polis.net.ua/"
+          },
+          "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "121"
+          },
+          "category": ["Автоцивілка", "КАСКО", "Зелена карта"],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "3",
+            "lowPrice": "700",
+            "highPrice": "20000",
+            "priceCurrency": "UAH",
+            "url": "https://www.e-polis.net.ua/"
+          }
+        }
+      ]
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MBW4467X');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js',
+      );
+      fbq('init', '374096575283289');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=374096575283289&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBW4467X"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="hdr">
+      <nav class="hdr-nav">
+        <a href="https://www.e-polis.net.ua/">
+          <img class="logo" src="../img/e-polis-logo.svg" alt="лого є-поліс" width="80px" />
+        </a>
+        <div class="menu">
+            <ul class="list nav-list">
+              </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="sub-header">
+          <h1>Комплексне страхування нерухомості «Все включено»</h1>
+          <p style="color: #e0e0e0">Професійний захист вашої оселі</p>
+        </div>
+
+        <section>
+          <p>
+            Ваш дім — це ваша фортеця. Програма <strong>«Все включено»</strong> — це реальний спосіб захистити квартиру або будинок, ремонт, меблі та техніку від пожежі, затоплення, крадіжки чи стихійних лих. Це сучасний сервіс, який можна оформити онлайн без візитів до офісу.
+          </p>
+        </section>
+
+        <section>
+          <h2>Чому обирають «Все включено»?</h2>
+          <div class="grid">
+            <div class="benefit-card">
+              <strong>✓ Покриття військових ризиків</strong><br />
+              Захист майна від ракет/дронів, дій вибухових хвиль, влучання уламків, тощо
+            </div>
+            <div class="benefit-card">
+              <strong>✓ Повне відшкодування</strong><br />
+              Сума встановлюється в межах дійсної вартості майна, а не фіксованих лімітів.
+            </div>
+            <div class="benefit-card">
+              <strong>✓ Широке покриття</strong><br />
+              Захист від специфічних ризиків: від розбитого скла до протікання акваріумів.
+            </div>
+            <div class="benefit-card">
+              <strong>✓ Відповідальність</strong><br />
+              Страхування вашої відповідальності перед сусідами вже включено у поліс.
+            </div>
+            <div class="benefit-card">
+              <strong>✓ Швидкість та сервіс</strong><br />
+              Підтримка 24/7 та оформлення договору за 5 хвилин без зайвої бюрократії.
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Що саме можна застрахувати?</h2>
+          <ul>
+            <li><strong>Нерухомість:</strong> конструктивні елементи квартири або будинку.</li>
+            <li><strong>Оздоблення:</strong> сучасний ремонт та інженерні комунікації.</li>
+            <li><strong>Домашнє майно:</strong> меблі, побутова техніка та цінні речі.</li>
+            <li><strong>Сусіди:</strong> шкода, завдана третім особам (наприклад, при затопленні).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Унікальні ризики, які ми покриваємо:</h2>
+          <p>На відміну від стандартних полісів, ми компенсуємо збитки у випадках:</p>
+          <div class="grid">
+            <div class="benefit-card" style="font-size: 0.9em;">
+              • Витікання води з акваріумів чи водяних матраців.<br>
+              • Поломка бойлерів, пральних машин чи систем «тепла підлога».
+            </div>
+            <div class="benefit-card" style="font-size: 0.9em;">
+              • Падіння дерев, електроопор чи випадкове розбиття скла.<br>
+              • Шкода від ремонту у сусідів (знесення стін тощо).
+            </div>
+          </div>
+        </section>
+
+        <div class="important-note">
+          <strong>Додатковий сервіс:</strong> ми компенсуємо до 10 000 грн на оренду тимчасового житла (якщо ваше пошкоджене), професійний клінінг після страхового випадку та заміну замків.
+        </div>
+
+        <div class="cta-container">
+          <h2>Захистіть свою оселю вже сьогодні</h2>
+          <p>Наш менеджер допоможе обрати оптимальний пакет захисту під ваші потреби.</p>
+          <a href="#" class="btn">ОФОРМИТИ КОНСУЛЬТАЦІЮ</a>
+        </div>
+
+        <img src="../img/fb-banner-new.webp" alt="ARX Property Insurance" style="width: 100%; border-radius: 8px;" />
+      </div>
+
+      <div class="menu-toggle-operator operator">
+        <img src="../img/operator.webp" alt="підтримка" width="100%" />
+      </div>
+    </main>
+
+    <div id="contactModal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <nav class="hdr-nav ftr-nav">
+          <img loading="lazy" class="logo ftr-logo" src="../img/e-polis-logo.svg" alt="лого є-поліс" width="80px" />
+          <p class="questions">Для розрахунку та консультації по продукту напишіть нам:</p>
+          <ul class="list nav-list">
+            <li><a href="viber://chat/?number=%2B380679170849"><img src="../img/free-icon-viber-3670059.webp" alt="вайбер" width="32px" /></a></li>
+            <li><a href="https://t.me/epolis_ua" target="_blank"><img src="../img/free-icon-telegram-2111646.webp" alt="телеграм" width="32px" /></a></li>
+            <li><a href="https://wa.me/380679170849"><img src="../img/whatsapp.svg" alt="whatsapp" width="32px" /></a></li>
+            <li><a href="mailto:support@e-polis.net.ua"><img src="../img/free-icon-gmail-732200.webp" alt="пошта" width="32px" /></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+   <footer class="ftr">
+      <nav class="hdr-nav ftr-nav">
+        <img
+          loading="lazy"
+          class="logo ftr-logo"
+          src="../img/e-polis-logo.svg"
+          alt="лого є-поліс"
+          width="80px"
+        />
+
+        <p style="color: #333;" class="questions">
+          Залишились запитання? <br />
+          Ми завжди на зв'язку
+        </p>
+
+        <ul class="list nav-list" id="contacts">
+          <li>
+            <a href="viber://chat/?number=%2B380679170849">
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-viber-3670059.webp"
+                alt="вайбер "
+                width="32px"
+            /></a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="mailto:support@e-polis.net.ua"
+              ><img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-gmail-732200.webp"
+                alt="пошта"
+                width="32px"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://t.me/epolis_ua"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-telegram-2111646.webp"
+                alt="телеграм"
+                width="32px"
+            /></a>
+          </li>
+
+          <li>
+            <a href="https://wa.me/380679170849">
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/whatsapp.svg"
+                alt="whatsapp "
+                width="32px"
+            /></a>
+          </li>
+
+          <li>
+            <a
+              href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng==
+            "
+            >
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-instagram-2111463.webp"
+                alt="telegram"
+                width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553156706888">
+              <img
+                loading="lazy"
+                class="contact-logo ftr-contact-logo"
+                src="../img/free-icon-facebook-145802.webp"
+                alt="facebook "
+                width="32px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="nbu-links-container">
+        <ul class="list">
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/contacts.html"
+              >Про нас</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/info-pro-poserednyka.html"
+              >Інформація про страхового посередника</a
+            ></ll
+          >
+          <ll
+            ><a target="_blank"
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="../img/Informatsiia_pro_ARKS_vidpovidno_do_s87_pro_strakhuvannia.pdf"
+              >Інформація про страховика</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/polityka-konfiencijnosti.html"
+              >Політика конфіденційності</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/publichna-oferta.html"
+              >Публічна оферта</a
+            ></ll
+          >
+          <li>
+            <a style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/Informatsiinyi_dokument_pro_standartnyi_strakhovyi_produkt_Strakhuvannia_maina_ta_vidpovidalnosti_Vse_vkliucheno.pdf">Інформаційний документ про стандартний страховий продукт "Комплексне страхування майна"</a>
+          </li>
+
+          <li>
+            <a target="_blank" style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/Zrazok_dohovoru_strakhuvannia_maina_ta_vidpovidalnosti_Vse_Vkliucheno.pdf">Зразок договору страхування</a>
+          </li>
+
+      
+        </ul>
+      </div>
+
+      <p class="copy">&copy; Всі права захищені</p>
+    </footer>
+
+    <script>
+      const modal = document.getElementById('contactModal');
+      const openBtn = document.querySelector('.btn');
+      const closeBtn = document.querySelector('.close-modal');
+
+      openBtn.addEventListener('click', e => {
+        e.preventDefault();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+
+      modal.addEventListener('click', e => {
+        if (e.target === modal) {
+          modal.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    </script>
+  </body>
+</html>

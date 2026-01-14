@@ -276,7 +276,7 @@ burger
   cursor: pointer;
   padding: 8px;
   border-radius: 5px;
-  background-color: #f5b049; /* season */
+  background-color: #7c9afd; /* season */
   color: var(--txt-color);
   font-size: 32px;
   font-family: Arial, Helvetica, sans-serif;
@@ -346,6 +346,31 @@ burger
   backdrop-filter: var(--secondary-bg);
 }
 
+/* Контейнер для нових трьох кнопок */
+.banner-row-new {
+  display: flex;
+  gap: 20px;            /* Відстань між кнопками */
+  margin-top: 20px;     /* Відступ від попереднього блоку кнопок */
+  width: 100%;
+}
+
+/* Кожна нова кнопка в десктопі займає порівну місця */
+.banner-row-new .banner-btn {
+  flex: 1; 
+  min-width: 0;         /* Запобігає виходу за межі */
+}
+
+/* Адаптивність для смартфонів */
+@media (max-width: 768px) {
+  .banner-row-new {
+    flex-direction: column; /* Стають одна під одну */
+  }
+  
+  .banner-row-new .banner-btn {
+    width: 100%;
+  }
+}
+
 /* seasons 
 url(../img/rb_542.webp) #7c9afd зима
 url(../img/spring-bg-removebg-preview.webp); весна
@@ -359,7 +384,7 @@ url(../img/autumn-removebg-preview.webp); #f5b049 осінь
   width: 100%;
   padding: 60px;
   background-image: url(../img/car-with-man-removebg-preview.webp),
-    url(../img/autumn-removebg-preview.webp);
+    url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 60px center, top center;
   height: 220px;
@@ -390,21 +415,42 @@ url(../img/autumn-removebg-preview.webp); #f5b049 осінь
 
 .kasko-bg-banner {
   background-image: url(../img/img-for-kasko-remove-bg.webp),
-    url(../img/autumn-removebg-preview.webp);
+    url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 10px center, top center;
 }
 
 .travel {
   background-image: url(../img/tourist.webp),
-    url(../img/autumn-removebg-preview.webp);
+    url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 10px center, top center;
 }
 
 .green-card {
   background-image: url(../img/test-img-for-gc.webp),
-    url(../img/autumn-removebg-preview.webp);
+    url(../img/rb_542.webp);
+  background-repeat: no-repeat, repeat;
+  background-position: 10px center, top center;
+}
+
+.property{
+  background-image: url(../img/test-img-for-gc.webp),
+    url(../img/rb_542.webp);
+  background-repeat: no-repeat, repeat;
+  background-position: 10px center, top center;
+}
+
+.health{
+  background-image: url(../img/test-img-for-gc.webp),
+    url(../img/rb_542.webp);
+  background-repeat: no-repeat, repeat;
+  background-position: 10px center, top center;
+}
+
+.weapon{
+  background-image: url(../img/test-img-for-gc.webp),
+    url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
   background-position: 10px center, top center;
 }
