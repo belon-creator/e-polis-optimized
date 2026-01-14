@@ -19,6 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let reviewsData = [
     {
+      name: 'Володимир',
+      rating: 5,
+      comment:
+        'Все гуд',
+    },
+    {
       name: 'Олександр',
       rating: 5,
       comment:
