@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Страхування зброї на полюванні та змаганнях | e-polis</title>
+    <meta
+      name="description"
+      content="Чому обов'язкове страхування відповідальності власників зброї критично важливе на полюванні та спортивних змаганнях. Захист від випадкових збитків третім особам."
+    />
+    <link
+      rel="shortcut icon"
+      href="../img/favicon-e-polis.jpeg"
+      type="image/x-icon"
+    />
+
+    <meta
+      property="og:image"
+      content="https://www.e-polis.net.ua/fb-banner-new"
+    />
+
+    <link rel="stylesheet" href="../css/main-page-minified.css" />
+    <style>
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        margin: 0 auto;
+        background-color: #f4f7f9;
+      }
+      .sub-header {
+        background-color: #3e4b3e;
+        color: white;
+        padding: 40px 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 30px;
+      }
+      h1 {
+        margin: 0;
+        font-size: 2.2em;
+      }
+      h2 {
+        color: #3e4b3e;
+        border-bottom: 2px solid #ff6600;
+        padding-bottom: 10px;
+        margin-top: 40px;
+      }
+      .risk-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        margin: 20px 0;
+        border-right: 5px solid #ff6600;
+      }
+      .cta-container {
+        text-align: center;
+        margin: 50px 0;
+        padding: 30px;
+        background: #fdf2e9;
+        border-radius: 12px;
+      }
+      .btn {
+        background-color: #ff6600;
+        color: white;
+        padding: 18px 35px;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 50px;
+        transition: background 0.3s;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: #e65c00;
+      }
+
+      .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(5px);
+      }
+      .modal-content {
+        background: white;
+        padding: 40px;
+        border-radius: 15px;
+        max-width: 450px;
+        width: 90%;
+        position: relative;
+        text-align: center;
+      }
+      .close-modal {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #666;
+      }
+      .nav-list {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
+      .modal-overlay.active {
+        display: flex;
+      }
+    </style>
+
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MBW4467X');
+    </script>
+  </head>
+  <body>
+    <header class="hdr">
+      <nav class="hdr-nav">
+        <a href="https://www.e-polis.net.ua/">
+          <img
+            class="logo"
+            src="../img/e-polis-logo.svg"
+            alt="лого є-поліс"
+            width="80px"
+          />
+        </a>
+        <div class="menu-toggle">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <div class="menu">
+          <ul class="list nav-list">
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                rel="noopener"
+                href="mailto:support@e-polis.net.ua"
+                ><img
+                  src="../img/free-icon-gmail-732200.webp"
+                  alt="пошта"
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                rel="noopener"
+                href="https://t.me/epolis_ua"
+                ><img
+                  src="../img/free-icon-telegram-2111646.webp"
+                  alt="телеграм"
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a class="nav-link" href="viber://chat/?number=%2B380679170849"
+                ><img
+                  src="../img/free-icon-viber-3670059.webp"
+                  alt="вайбер"
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                rel="noopener"
+                href="https://wa.me/380679170849"
+                ><img src="../img/whatsapp.svg" alt="whatsapp" width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                rel="noopener"
+                href="https://www.facebook.com/profile.php?id=61553156706888"
+                ><img
+                  src="../img/free-icon-facebook-145802.webp"
+                  alt="facebook"
+                  width="32px"
+              /></a>
+            </li>
+            <li class="nav-list-item">
+              <a
+                class="nav-link"
+                target="_blank"
+                rel="noopener"
+                href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng=="
+                ><img
+                  src="../img/free-icon-instagram-2111463.webp"
+                  alt="instagram"
+                  width="32px"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="sub-header">
+          <h1>Полювання та спорт: безпека понад усе</h1>
+          <img src="../img/weapon.webp" alt="страхування зброї" />
+          <p style="color: #ddd">
+            Як страховий поліс захищає вас у моменти активного використання
+            зброї
+          </p>
+        </div>
+
+        <section>
+          <h2>Ризики, які неможливо ігнорувати</h2>
+          <p>
+            Навіть найдосвідченіший мисливець чи стрілець-спортсмен знає: зброя
+            — це зона підвищеної небезпеки. Рикошет, випадковий постріл або
+            неочікувана поява людини в зоні ведення вогню можуть призвести до
+            трагічних наслідків та величезних фінансових позовів.
+          </p>
+        </section>
+
+        <section>
+          <div class="risk-card">
+            <h3>Захист на відкритому просторі</h3>
+            <p>
+              Ваша
+              <a
+                class="seo-link"
+                style="display: inline"
+                href="https://www.e-polis.net.ua/pages/vidpovidalnist-vlasnykiv-zbroi.html"
+                >страховка на зброю</a
+              >
+              працює не лише "для галочки" в дозвільній системі. Вона забезпечує
+              реальну фінансову парасольку:
+            </p>
+            <ul>
+              <li>
+                Відшкодування шкоди майну третіх осіб (наприклад, пошкодження
+                авто чи споруди).
+              </li>
+              <li>
+                Покриття витрат на лікування потерпілих у разі нещасного
+                випадку.
+              </li>
+              <li>
+                Юридичний спокій: страховий поліс є доказом вашої відповідальної
+                підготовки до заходу.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Чи обов'язково мати поліс при собі?</h2>
+          <p>
+            Так, під час полювання єгерська служба або представники Поліції
+            мають право перевірити наявність діючого страхового поліса.
+            Відсутність страховки може стати причиною не лише штрафу, а й
+            вилучення зброї та анулювання дозволу.
+          </p>
+          <p>
+            Ми в <strong>e-polis</strong> робимо все, щоб ви не відволікалися
+            від улюбленої справи. Наші фахівці підготують поліс за 10 хвилин,
+            щоб ви могли спокійно вирушати на сезон чи змагання.
+          </p>
+        </section>
+
+        <div class="cta-container">
+          <h2>Сезон полювання вже близько?</h2>
+          <p>
+            Надішліть фото документів нашому спеціалісту і отримайте чинний
+            поліс за лічені хвилини.
+          </p>
+          <a
+            href="https://www.e-polis.net.ua/pages/vidpovidalnist-vlasnykiv-zbroi.html"
+            class="btn"
+            >ОФОРМИТИ ЗА 10 ХВИЛИН</a
+          >
+        </div>
+        <img src="../fb-banner-new.webp" alt="epolis">
+      </div>
+            
+
+    </main>
+
+    <div id="contactModal" class="modal-overlay">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <img
+          class="logo"
+          src="../img/e-polis-logo.svg"
+          alt="лого є-поліс"
+          width="80px"
+        />
+        <p class="questions" style="margin-top: 20px">
+          Наші консультанти допоможуть з вибором терміну страхування:
+        </p>
+        <ul class="list nav-list">
+          <li>
+            <a href="mailto:support@e-polis.net.ua"
+              ><img src="../img/free-icon-gmail-732200.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://t.me/epolis_ua"
+              ><img src="../img/free-icon-telegram-2111646.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="viber://chat/?number=%2B380679170849"
+              ><img src="../img/free-icon-viber-3670059.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://wa.me/380679170849"
+              ><img src="../img/whatsapp.svg" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng=="
+              ><img src="../img/free-icon-instagram-2111463.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553156706888"
+              ><img src="../img/free-icon-facebook-145802.webp" width="32px"
+            /></a>
+          </li>
+        </ul>
+      </div>
+      <img src="../fb-banner-new.webp" alt="страховка зброї" />
+    </div>
+
+    <footer class="ftr">
+      <nav class="hdr-nav ftr-nav">
+        <img
+          class="logo ftr-logo"
+          src="../img/e-polis-logo.svg"
+          alt="лого є-поліс"
+          width="80px"
+        />
+        <ul class="list nav-list">
+          <li>
+            <a href="mailto:support@e-polis.net.ua"
+              ><img src="../img/free-icon-gmail-732200.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://t.me/epolis_ua"
+              ><img src="../img/free-icon-telegram-2111646.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="viber://chat/?number=%2B380679170849"
+              ><img src="../img/free-icon-viber-3670059.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://wa.me/380679170849"
+              ><img src="../img/whatsapp.svg" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng=="
+              ><img src="../img/free-icon-instagram-2111463.webp" width="32px"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=61553156706888"
+              ><img src="../img/free-icon-facebook-145802.webp" width="32px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+
+      <p class="copy" style="text-align: center; padding: 20px">
+        &copy; e-polis.net.ua | Всі права захищені
+      </p>
+    </footer>
+
+    <script type="module" src="../js/minified-main.js"></script>
+  </body>
+</html>
