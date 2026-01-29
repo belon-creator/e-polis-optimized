@@ -7,7 +7,6 @@
   --ftr-bg: #c4c4c4;
 }
 
-
 html {
   box-sizing: border-box;
 }
@@ -22,7 +21,7 @@ body {
   margin: 0;
   padding: 0;
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
 }
 
@@ -351,8 +350,8 @@ burger
 /* Контейнер для нових трьох кнопок */
 .banner-row-new {
   display: flex;
-  flex-wrap: wrap;       /* Дозволяємо перенос, щоб не тиснуло в один ряд */
-  gap: 20px;            /* Відстань регулюється тільки тут */
+  flex-wrap: wrap; /* Дозволяємо перенос, щоб не тиснуло в один ряд */
+  gap: 20px; /* Відстань регулюється тільки тут */
   margin-top: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -360,9 +359,9 @@ burger
 
 /* 3. Налаштування кнопок всередині нового ряду */
 .banner-row-new .banner-btn {
-  flex: 1 1 calc(33.333% - 20px); /* Розрахунок 3 в ряд з урахуванням gap */
-  min-width: 280px;               /* Щоб на вузьких екранах вони не ставали надто тонкими */
-  margin: 0;                      /* Прибираємо margin, бо є gap у батька */
+  flex: 1 1 calc(50% - 20px); /* 2 в ряд */
+  min-width: 300px; /* можна зменшити/збільшити */
+  margin: 0;
 }
 
 /* 4. Адаптивність для смартфонів */
@@ -371,11 +370,17 @@ burger
     flex-direction: column;
     gap: 12px;
   }
-  
+
   .banner-row-new .banner-btn {
     width: 100%;
+    flex: 1 1 100%;
     min-width: 100%;
-    margin: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .banner-row-new .banner-btn {
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
@@ -391,11 +396,13 @@ url(../img/autumn-removebg-preview.webp); #f5b049 осінь
 .avtocyvilka {
   width: 100%;
   padding: 60px;
-  background-image: url(../img/car-with-man-removebg-preview.webp),
-    url(../img/rb_542.webp);
+  background-image:
+    url(../img/car-with-man-removebg-preview.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 60px center, top center;
-  height: 220px;
+  background-position:
+    60px center,
+    top center;
+  min-height: 220px;
   border: 1px solid #b3b2b2;
   display: flex;
   align-items: end;
@@ -422,45 +429,60 @@ url(../img/autumn-removebg-preview.webp); #f5b049 осінь
 }
 
 .kasko-bg-banner {
-  background-image: url(../img/img-for-kasko-remove-bg.webp),
-    url(../img/rb_542.webp);
+  background-image:
+    url(../img/img-for-kasko-remove-bg.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 10px center, top center;
+  background-position:
+    10px center,
+    top center;
 }
 
 .travel {
-  background-image: url(../img/tourist.webp),
-    url(../img/rb_542.webp);
+  background-image: url(../img/tourist.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 10px center, top center;
+  background-position:
+    10px center,
+    top center;
 }
 
 .green-card {
-  background-image: url(../img/test-img-for-gc.webp),
-    url(../img/rb_542.webp);
+  background-image: url(../img/test-img-for-gc.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 10px center, top center;
+  background-position:
+    10px center,
+    top center;
 }
 
-.property{
-  background-image: url(../img/property.webp),
-    url(../img/rb_542.webp);
+.property {
+  background-image: url(../img/property.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 10px center, top center;
+  background-position:
+    10px center,
+    top center;
 }
 
-.health{
-  background-image: url(../img/health.webp),
-    url(../img/rb_542.webp);
+.medicine-card{
+   background-image: url(../img/medidcine-without-bg.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 10px center, top center;
+  background-position:
+    10px center,
+    top center;
 }
 
-.weapon{
-  background-image: url(../img/weapon.webp),
-    url(../img/rb_542.webp);
+.health {
+  background-image: url(../img/health.webp), url(../img/rb_542.webp);
   background-repeat: no-repeat, repeat;
-  background-position: 10px center, top center;
+  background-position:
+    10px center,
+    top center;
+}
+
+.weapon {
+  background-image: url(../img/weapon.webp), url(../img/rb_542.webp);
+  background-repeat: no-repeat, repeat;
+  background-position:
+    10px center,
+    top center;
 }
 
 .order {

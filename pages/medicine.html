@@ -1,17 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Добровільне медичне страхування (ДМС)</title>
+    <title>Медичне страхування «Медичний консьєрж» | Купити поліс онлайн</title>
     <meta
       name="description"
-      content="Отримайте доступ до якісної медичної допомоги за доступними цінами з полісом добровільного медичного страхування! Екслюзивний продукт розроблений для клієнтів нашого сервісу"
+      content="Оформіть медичну страховку онлайн за 5 хвилин. 4 програми захисту з покриттям до 250 000 грн. Без черг, прямі виплати клінікам, доставка ліків."
     />
-    <meta
-      name="keywords"
-      content="Добровільне медичне страхування, ДМС, СК ІНГО, Медичне страхування, Медичні послуги, Доступні ціни, Широкий спектр, Добровольное медицинское страхование"
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
     />
+    <link rel="stylesheet" href="../css/main-page-minified.css" />
+
     <meta property="og:title" content="Добровільне медичне страхування (ДМС)" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.e-polis.net.ua/" />
@@ -21,15 +24,344 @@
     />
     <meta property="og:image" content="https://e-polis.net.ua/banner.png">
 
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/medicine.css" />
     <link
       rel="shortcut icon"
       href="../img/favicon-e-polis.jpeg"
       type="image/x-icon"
     />
 
-     <!-- Meta Pixel Code -->
+    <style>
+      :root {
+        --vuso-blue: #0056b3;
+        --vuso-orange: #ff6b00;
+        --light-bg: #f4f7f9;
+        --text-main: #333;
+        --white: #ffffff;
+      }
+
+      body {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        color: var(--text-main);
+        line-height: 1.6;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+     /* Модальне вікно */
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 40px 20px;
+    border-radius: 20px;
+    position: relative;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px; right: 15px;
+    background: none; border: none;
+    font-size: 35px; cursor: pointer; color: #333;
+}
+
+/* Налаштування списку контактів у модалці */
+.modal-content .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+    margin-top: 25px;
+}
+
+.modal-content .questions {
+    font-weight: 700;
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Фікс прокрутки фону */
+body.modal-open { overflow: hidden; }
+
+/* Адаптивність таблиці БЕЗ прокрутки */
+@media (max-width: 768px) {
+    table {
+        min-width: 100% !important;
+        table-layout: fixed;
+        font-size: 10px;
+    }
+    th, td { padding: 6px 2px !important; }
+    .feature-label { width: 30%; font-size: 9px; }
+    .highlight { font-size: 9px !important; }
+    /* Приховуємо слово Програма на мобільних */
+    thead th span { display: none; }
+}
+
+.close-modal:hover {
+    color: var(--vuso-orange);
+}
+
+.ftr-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.questions {
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.modal-content .nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+.modal-content .nav-list img {
+    transition: transform 0.2s;
+}
+
+.modal-content .nav-list img:hover {
+    transform: scale(1.2);
+}
+
+/* Клас для блокування прокрутки фону при відкритій модалці */
+body.modal-open {
+    overflow: hidden;
+}
+
+      /* HERO SECTION */
+      .hero {
+     background-color: #003d80 !important; /* Тільки один чистий синій колір */
+    background-image: none !important;    /* Видаляємо будь-які градієнти чи картинки */
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+    
+      }
+
+.hero .container {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+      .hero h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2.8rem;
+        margin: 0;
+      }
+      .hero p {
+        font-size: 1.25rem;
+        margin: 20px 0 35px;
+        opacity: 0.9;
+      }
+
+      .cta-button {
+        background: var(--vuso-orange);
+        color: white;
+        padding: 18px 40px;
+        text-decoration: none;
+        border-radius: 50px;
+        font-weight: 800;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        transition: 0.3s;
+        display: inline-block;
+        box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+        cursor: pointer;
+      }
+      .cta-button:hover {
+        transform: scale(1.05);
+        background: #e66000;
+      }
+
+      /* ADVANTAGES */
+      .advantages {
+        padding: 60px 0;
+        text-align: center;
+      }
+      .adv-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+      .adv-item {
+        padding: 20px;
+      }
+      .adv-item img {
+        width: 60px;
+        margin-bottom: 15px;
+      }
+      .adv-item h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: var(--vuso-blue);
+      }
+
+      /* TABLE SECTION */
+      .table-section {
+        background: var(--light-bg);
+        padding: 70px 0;
+      }
+      .table-title {
+        text-align: center;
+        margin-bottom: 40px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 2rem;
+      }
+
+      .table-container {
+        overflow-x: auto;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 900px;
+      }
+      th,
+      td {
+        padding: 18px;
+        border: 1px solid #eee;
+        text-align: center;
+      }
+      th {
+        background: var(--vuso-blue);
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .feature-label {
+        text-align: left;
+        background: #fafafa;
+        font-weight: 600;
+        width: 30%;
+      }
+      .highlight {
+        color: var(--vuso-orange);
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
+
+      /* SEO CONTENT */
+      .seo-text {
+        padding: 60px 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .seo-text h2 {
+        color: var(--vuso-blue);
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      footer {
+        background: #222;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 1.8rem;
+        }
+        .cta-button {
+          width: 80%;
+        }
+      }
+
+      /* Оновлені стилі для адаптивності таблиці */
+@media (max-width: 768px) {
+    .table-section {
+        padding: 40px 0;
+    }
+    
+    .table-container {
+        border-radius: 8px;
+        margin: 0 -10px; /* Трохи розширюємо контейнер на мобільних */
+    }
+
+    table {
+        min-width: 100% !important; /* Прибираємо фіксовану ширину */
+        table-layout: fixed; /* Змушуємо колонки ділити простір жорстко */
+        font-size: 11px; /* Зменшуємо загальний шрифт для читабельності */
+    }
+
+    th, td {
+        padding: 8px 4px !important; /* Мінімальні відступи */
+        word-wrap: break-word; /* Перенос слів, щоб не розпирало колонки */
+    }
+
+    .feature-label {
+        width: 35% !important; /* Перша колонка трохи ширша для тексту */
+        font-size: 10px;
+        line-height: 1.2;
+    }
+
+    th:not(.feature-label), td:not(.feature-label) {
+        width: 16.25%; /* Рівні вузькі колонки для програм V, U, S, O */
+    }
+
+    .highlight {
+        font-size: 10px !important;
+    }
+
+    /* Ховаємо довгі назви програм, залишаємо лише літери, якщо потрібно ще більше місця */
+    /* thead th:nth-child(2)::after { content: 'V'; }
+    thead th:nth-child(3)::after { content: 'U'; }
+    thead th:nth-child(4)::after { content: 'S'; }
+    thead th:nth-child(5)::after { content: 'O'; }
+    thead th span { display: none; }  */
+    
+    /* Спеціальне скорочення для заголовків програм */
+    th span.mob-hide { display: none; }
+}
+    </style>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-MBW4467X');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel Code -->
     <script>
       !(function (f, b, e, v, n, t, s) {
         if (f.fbq) return;
@@ -67,10 +399,26 @@
     <!-- End Meta Pixel Code -->
   </head>
   <body>
+<!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-MBW4467X"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <header class="hdr">
       <nav class="hdr-nav">
         <a href="https://www.e-polis.net.ua/">
-          <img class="logo" src="../img/e-polis-logo.svg" alt="" width="80px" />
+          <img
+            class="logo"
+            src="../img/e-polis-logo.svg"
+            alt="є-поліс"
+            width="80px"
+          />
         </a>
 
         <div class="menu-toggle">
@@ -156,436 +504,276 @@
     </header>
 
     <main>
-      <section class="med-banner">
-        <div class="container">
-          <img
-            src="../img/med-banner.png"
-            alt="добровільне медичне страхування"
-          />
-          <h1 class="descr-heading">
-            Добровільне медичне страхування від ск ІНГО
-          </h1>
-          <p class="descr-txt">
-            Забезпечує покриття фінансових витрат на медичне обслуговування та
-            лікування. <br />
-            Ексклюзивний продукт створений для нашого сервісу!
-          </p>
-        </div>
-      </section>
-      <section class="advantages">
-        <div class="container">
-          <h2 class="descr-heading">Переваги ДМС</h2>
-          <ul>
-            <li class="advantages-list-item">
-              Широкий спектр медичних послуг:
-            </li>
-            <ul>
-              <li class="advantages-list-item">
-                Амбулаторно-поліклінічна допомога
-              </li>
-              <li class="advantages-list-item">Стаціонарна допомога</li>
-              <li class="advantages-list-item">Невідкладна допомога</li>
-              <li class="advantages-list-item">Стоматологія</li>
-              <li class="advantages-list-item">Офтальмологія</li>
-              <li class="advantages-list-item">Багато іншого</li>
-            </ul>
+        <section class="hero">
+      <div class="container">
+        <h1>Турбота про здоров'я без зайвих зусиль</h1>
+        <img src="../img/medicine.webp" alt="медична страховка">
+        <p style="color: #eee;">
+          Медичний поліс — це 4 програми захисту для всієї родини з
+          лімітом до 250 000 грн
+        </p>
+        <a class="cta-button">Оформити за 5 хвилин</a>
+      </div>
+    </section>
 
-            <li>Доступні ціни:</li>
-            <ul>
-              <li class="advantages-list-item">
-                Від 970 грн на рік для дорослих
-              </li>
-            </ul>
-            <li class="advantages-list-item">
-              Власні медичні центри та асистанс:
-            </li>
-            <ul>
-              <li class="advantages-list-item">
-                Швидка та якісна допомога 24/7
-              </li>
-            </ul>
-            <li class="advantages-list-item">
-              Можливість самостійного вибору медичного закладу:
-            </li>
-            <ul>
-              <li class="advantages-list-item">
-                Понад 300 партнерів по всій Україні
-              </li>
-            </ul>
-            <li>Оплата за чеками:</li>
-            <ul>
-              <li class="advantages-list-item">
-                Відшкодування витрат на медичні послуги, не передбачені
-                програмою страхування
-              </li>
-            </ul>
-          </ul>
-        </div>
-      </section>
-
-      <section class="pogram-descr">
-        <div class="container">
-          <img
-            src="../img/med-banner-2.png"
-            alt="порівняння програм медичного страхування"
-          />
-
-          <h2>5 програм страхування на вибір:</h2>
-          <div class="slider">
-            <ul class="slides list">
-              <li class="advantages-list-item pogram-descr-item slide">
-                <h3>Невідкладна</h3>
-                <p>Екстрена стаціонарна допомога + медикаменти</p>
-                <p>
-                  Швидка та невідкладна допомога від будь-яких комерційних
-                  клінік
-                </p>
-                <p>Категорія медичних закладів - Державні та відомчі клініки</p>
-              </li>
-
-              <li class="advantages-list-item pogram-descr-item slide">
-                <h3>Соціальна</h3>
-                <p>Амбулаторно-поліклінічна допомога</p>
-                <p>Консультації лікарів</p>
-                <p>Діагностичні (лабораторні та інструментальні) обстеження</p>
-                <p>Маніпуляції та малі хірургічні операції</p>
-                <p>Денний стаціонар</p>
-                <p>Фізіотерапія – 10 процедур за кожний страховий випадок</p>
-                <p>
-                  Забезпечення лікарськими засобами (франшиза 20%) в тому числі
-                  гомеопатія
-                </p>
-                <p>
-                  Планова стаціонарна допомога та забезпечення медикаментами
-                </p>
-                <p>
-                  Екстрена стаціонарна допомога та забезпечення медикаментами
-                </p>
-                <p>
-                  Швидка та невідкладна допомога від будь-яких комерційних
-                  клінік
-                </p>
-                <p>Категорія медичних закладів - Державні та відомчі клініки</p>
-              </li>
-
-              <li class="advantages-list-item pogram-descr-item slide">
-                <h3>Комфорт</h3>
-                <p>Амбулаторно-поліклінічна допомога</p>
-                <p>Консультації лікарів</p>
-                <p>Діагностичні (лабораторні та інструментальні) обстеження</p>
-                <p>Маніпуляції та малі хірургічні операції</p>
-                <p>Денний стаціонар</p>
-                <p>Фізіотерапія – 10 процедур за кожний страховий випадок</p>
-                <p>
-                  Забезпечення лікарськими засобами (франшиза 20%) в тому числі
-                  гомеопатія
-                </p>
-                <p>
-                  Планова стаціонарна допомога та забезпечення медикаментами
-                </p>
-                <p>
-                  Екстрена стаціонарна допомога та забезпечення медикаментами
-                </p>
-                <p>
-                  Швидка та невідкладна допомога від будь-яких комерційних
-                  клінік
-                </p>
-                <p>
-                  Категорія медичних закладів - Комерційні низького (франшиза
-                  0%) та середнього (франшиза 20%) цінового рівня
-                </p>
-              </li>
-
-              <li class="advantages-list-item pogram-descr-item slide">
-                <h3>Комфорт +</h3>
-                <p>Амбулаторно-поліклінічна допомога</p>
-                <p>Консультації лікарів</p>
-                <p>Діагностичні (лабораторні та інструментальні) обстеження</p>
-                <p>Маніпуляції та малі хірургічні операції</p>
-                <p>Денний стаціонар</p>
-                <p>Фізіотерапія – 10 процедур за кожний страховий випадок</p>
-                <p>
-                  Забезпечення лікарськими засобами (франшиза 0%) в тому числі
-                  гомеопатія
-                </p>
-                <p>
-                  Екстрена стоматологічна допомога (ліміт 1500 грн/рік) у
-                  будь-яких комерційних клініках
-                </p>
-                <p>
-                  Лікування COVID-19 в амбулаторно-поліклінічних умовах в
-                  комерційних клініках (ліміт 3000 грн/рік)
-                </p>
-                <p>
-                  Планова стаціонарна допомога та забезпечення медикаментами
-                </p>
-                <p>
-                  Екстрена стаціонарна допомога та забезпечення медикаментами
-                </p>
-                <p>
-                  Швидка та невідкладна допомога від будь-яких комерційних
-                  клінік
-                </p>
-                <p>
-                  Категорія медичних закладів – Комерційні низького (франшиза
-                  0%) та середнього (франшиза 20%) цінового рівня
-                </p>
-              </li>
-
-              <li class="advantages-list-item pogram-descr-item slide">
-                <h3>Преміум</h3>
-                <p>Амбулаторно-поліклінічна допомога</p>
-                <p>Профілактичне лікування хронічних захворювань</p>
-                <p>Забезпечення медикаментами</p>
-                <p>Екстрена стаціонарна допомога + медикаменти</p>
-                <p>
-                  Планова стаціонарна допомога, включаючи забезпечення
-                  медикаментами
-                </p>
-                <p>Швидка та невідкладна допомога</p>
-                <p>Вітамінізація</p>
-                <p>Категорія медичних закладів - Комерційні клініки (люкс)</p>
-              </li>
-            </ul>
-            <button class="btn prev">&#10094;</button>
-            <button class="btn next">&#10095;</button>
-          </div>
-        </div>
-      </section>
-
-      <section class="programs">
-        <div class="container">
-          <h2 class="descr-heading">Програми ДМС та ліміти покриття:</h2>
-          <table class="table">
-            <tr class="t-row">
-              <th>Програма</th>
-              <th>Страхова сума</th>
-              <th>Вік</th>
-              <th>Вартість</th>
-            </tr>
-            <tr class="t-row">
-              <td class="t-data">Невідкладна</td>
-              <td class="t-data">115 000 грн</td>
-              <td class="t-data">0-60</td>
-              <td class="t-data">Від 970 грн</td>
-            </tr>
-            <tr class="t-row">
-              <td class="t-data">Соціальна</td>
-              <td class="t-data">270 000 грн</td>
-              <td class="t-data">0-60</td>
-              <td class="t-data">Від 7 530 грн</td>
-            </tr>
-            <tr class="t-row">
-              <td class="t-data">Комфорт</td>
-              <td class="t-data">310 000 грн</td>
-              <td class="t-data">0-60</td>
-              <td class="t-data">Від 13 930 грн</td>
-            </tr>
-            <tr class="t-row">
-              <td class="t-data">Комфорт+</td>
-              <td class="t-data">375 000 грн</td>
-              <td class="t-data">0-60</td>
-              <td class="t-data">Від 17 800 грн</td>
-            </tr>
-            <tr class="t-row">
-              <td class="t-data">Преміум</td>
-              <td class="t-data">415 000 грн</td>
-              <td class="t-data">0-60</td>
-              <td class="t-data">Від 27 240 грн</td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-      <section class="contacts">
-        <div class="container">
-          <p class="med-nav-txt">
-            Для оформлення поліса та отримання додаткової консультації
-            зв'яжіться з нами зручним для Вас способом
-          </p>
-          <ul class="list nav-list med-nav-contacts">
-            <li>
-              <a href="viber://chat/?number=%2B380679170849">
-                <img
-                  class="contact-logo ftr-contact-logo"
-                  src="../img/free-icon-viber-3670059.webp"
-                  alt="вайбер "
-                  width="32px"
-              /></a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="mailto:support@e-polis.net.ua"
-                ><img
-                  class="contact-logo ftr-contact-logo"
-                  src="../img/free-icon-gmail-732200.webp"
-                  alt="пошта"
-                  width="32px"
-              /></a>
-            </li>
-            <li>
-              <a
-                href="https://t.me/epolis_ua"
-                target="_blank"
-                rel="noopener noreferrer"
-                ><img
-                  class="contact-logo ftr-contact-logo"
-                  src="../img/free-icon-telegram-2111646.webp"
-                  alt="телеграм"
-                  width="32px"
-              /></a>
-            </li>
-
-            <li>
-              <a href="https://wa.me/380679170849">
-                <img
-                  class="contact-logo ftr-contact-logo"
-                  src="../img/whatsapp.svg"
-                  alt="whatsapp "
-                  width="32px"
-              /></a>
-            </li>
-
-            <li>
-              <a
-                href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng==
-          "
-              >
-                <img
-                  class="contact-logo ftr-contact-logo"
-                  src="../img/free-icon-instagram-2111463.webp"
-                  alt="facebook "
-                  width="32px"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.facebook.com/profile.php?id=61553156706888">
-                <img
-                  class="contact-logo ftr-contact-logo"
-                  src="../img/free-icon-facebook-145802.webp"
-                  alt="facebook "
-                  width="32px"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <h2>ДІЇ ПРИ НАСТАННІ СТРАХОВОГО ВИПАДКУ</h2>
+    <section class="advantages container">
+      <h2>Чому обирають нас?</h2>
+      <div class="adv-grid">
+        <div class="adv-item">
+          <h3>Цілодобовий асистанс</h3>
           <p>
-            При настанні страхового випадку Застрахована особа повинна
-            звернутися до медичного асистансу за багатоканальним номером,
-            зазначеним у договорі страхування. Медичний Асистанс організує
-            необхідну медичну допомогу Застрахованій особі. При цьому
-            організація таких послуг здійснюється виходячи з переліку лікарняних
-            установ, які передбачені умовами договору страхування та включені до
-            Медичної бази страхової компанії. У разі настання страхового випадку
-            Застрахована особа може самостійно звернутися в будь-яку лікарняну
-            установу, що не включена до Медичної бази, отримати медичні послуги
-            та оплатити їх самостійно. У цьому випадку Застрахована особа
-            повинна повідомити про це медичний асистанс. В екстрених випадках
-            Застрахована особа госпіталізується лікарями невідкладної медичної
-            допомоги в рекомендовану ними лікарняну установу, яка при наявності
-            відповідних відділень та місць може надати необхідну медичну
-            допомогу за профілем. При відвідуванні медичної установи необхідно
-            мати при собі Картку Застрахованої особи (надсилається разом с
-            оригіналами договорів) та документ, що засвідчує особу.
+            Ваш персональний медичний консьєрж на зв'язку 24/7. Запис до лікаря
+            за один дзвінок.
           </p>
         </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <h2>
-            Договір страхування не може бути укладений з особою, яка на момент
-            укладання договору має наступні стани, діагнози або захворювання:
-          </h2>
-          <ul>
-            <li class="exclusion-list-item">інвалідність 1 - 2 груп</li>
-            <li class="exclusion-list-item">
-              токсичний гепатит, хронічний гепатит B, C, D, E, F
-            </li>
-            <li class="exclusion-list-item">цироз печінки</li>
-            <li class="exclusion-list-item">хронічна ниркова недостатність</li>
-            <li class="exclusion-list-item">інсульт</li>
-            <li class="exclusion-list-item">злоякісні новоутворення</li>
-            <li class="exclusion-list-item">
-              носій ВІЛ, хвора на СНІД та асоційовані з ним захворюваннями
-            </li>
-            <li class="exclusion-list-item">
-              раніше виявлені злоякісні новоутворення, в тому числі гемобластоз
-            </li>
-            <li class="exclusion-list-item">
-              симптоми лихоманки або постійного підвищення температури протягом
-              останніх 5-14 днів, кашлю, ускладненого дихання, кровохаркання
-            </li>
-            <li class="exclusion-list-item">
-              тісний контакт з особою з підтвердженим випадком COVID-19 протягом
-              останніх 14 днів
-            </li>
-            <li class="exclusion-list-item">
-              підтверджений лабораторний тест на COVID-19 (експрес тест або ПЦР
-              діагностика)
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="form">
-        <div class="container">
-          <iframe
-            class="frame"
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfQjsMg6-foExSiaf8fxSRT7mN-fb1rRwF-DwvTvCy3mArpWQ/viewform?embedded=true"
-            width="320"
-            height="520"
-            frameborder="0"
-            marginheight="0"
-            marginwidth="0"
-            >Загрузка…</iframe
-          >
-        </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <p class="red-txt">
-            Важливо! Якщо страховий платіж по обраній програмі більший за 27 000
-            грн, обов'язково потрібно провести ідентифікацію клієнта (фінансовий
-            моніторинг). <br />
-            - Паспорт (1-3,11 ст) <br />
-            - Ідентифікаційний код <br />
-            - Банківські реквизити <br />
-            - Опитувальник
+        <div class="adv-item">
+          <h3>Прямі розрахунки</h3>
+          <p>
+            Вам не потрібно платити власні кошти — ми розраховуємося з аптеками
+            та клініками напряму.
           </p>
         </div>
-      </section>
-
-      <section>
-        <div class="container">
-          <p style="text-align: center; font-weight: bold">
-            Вас також може зацікавити
-            <a
-              style="display: inline-block"
-              href="../pages/neshcasni-vypadky.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              >страхування від нещасних випадків</a
-            >
+        <div class="adv-item">
+          <h3>Доставка ліків</h3>
+          <p>
+            Безкоштовна доставка призначених медикаментів до дверей (при
+            замовленні від 100 грн).
           </p>
         </div>
-      </section>
+        <div class="adv-item">
+          <h3>0% Франшиза</h3>
+          <p>
+            Ніяких прихованих витрат при невідкладному стаціонарному лікуванні в
+            усіх програмах.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section" id="compare">
+    <div class="container">
+        <h2 class="table-title">Порівняння програм страхування «Медичний консьєрж»</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Послуги та умови</th>
+                        <th>Програма 1</th>
+                        <th>Програма 2</th>
+                        <th>Програма 3</th>
+                        <th>Програма 4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="feature-label">Річна страхова сума на 1 особу</td>
+                        <td class="highlight">75 000,00 грн</td>
+                        <td class="highlight">100 000,00 грн</td>
+                        <td class="highlight">200 000,00 грн</td>
+                        <td class="highlight">250 000,00 грн</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Вартість</td>
+                        <td class="highlight">2000  грн</td>
+                        <td class="highlight">11000  грн</td>
+                        <td class="highlight">15000  грн</td>
+                        <td class="highlight">25000  грн</td>
+                    </tr>
+
+                    <tr style="background-color: #f1f5f9; font-weight: bold;">
+                        <td colspan="5">Амбулаторно-поліклінічна медична допомога</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Консультації, діагностика, малі операції</td>
+                        <td>—</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Виклик лікаря додому/в офіс (Київ +30 км)</td>
+                        <td>—</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Клас медичних закладів (Амбулаторія)</td>
+                        <td>—</td>
+                        <td>1-4 (100%), 5(80%), 6(70%), 7(50%), 8(30%)</td>
+                        <td>1-5 (100%), 6(80%), 7(50%), 8(30%)</td>
+                        <td>1-7 (100%), 8(70%)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Франшиза на медикаменти (Амбулаторія)</td>
+                        <td>—</td>
+                        <td>30%</td>
+                        <td>30%</td>
+                        <td>0%</td>
+                    </tr>
+
+                    <tr style="background-color: #f1f5f9; font-weight: bold;">
+                        <td colspan="5">Стаціонарне лікування</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Невідкладне стаціонарне лікування</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Планове стаціонарне лікування</td>
+                        <td>—</td>
+                        <td>—</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Клас медичних закладів (Стаціонар)</td>
+                        <td>1-7 (100%), 8(70%)</td>
+                        <td>1-4 (100%), 5(80%), 6(70%), 7(50%), 8(30%)</td>
+                        <td>1-5 (100%), 6(80%), 7(50%), 8(30%)</td>
+                        <td>1-7 (100%), 8(70%)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Забезпечення медикаментами (Стаціонар)</td>
+                        <td>Так (0% франшиза)</td>
+                        <td>Так (0% франшиза)</td>
+                        <td>Так (0% франшиза)</td>
+                        <td>Так (0% франшиза)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Харчування та перебування в палаті</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                    </tr>
+
+                    <tr style="background-color: #f1f5f9; font-weight: bold;">
+                        <td colspan="5">Швидка медична допомога</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Виїзд карети ШМД (Київ +30 км)</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                        <td>Передбачено</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Клас медичних закладів (Швидка)</td>
+                        <td>1-8 (100%)</td>
+                        <td>1-8 (100%)</td>
+                        <td>1-8 (100%)</td>
+                        <td>1-8 (100%)</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Транспортування та держ. госпіталізація</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                    </tr>
+
+                    <tr style="background-color: #f1f5f9; font-weight: bold;">
+                        <td colspan="5">Додаткові медичні послуги та сервіс</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Доставка призначених ліків (від 100 грн)</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Пробіотики, гепато- та хондропротектори</td>
+                        <td>Так</td>
+                        <td>Так (1 курс/рік)</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Фітотерапевтичні та гомеопатичні засоби</td>
+                        <td>Так</td>
+                        <td>Так (1 курс/рік)</td>
+                        <td>Так</td>
+                        <td>Так</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-label">Невідкладна допомога в травмпунктах</td>
+                        <td>Передбачено</td>
+                        <td>В межах амбулаторії</td>
+                        <td>В межах амбулаторії</td>
+                        <td>В межах амбулаторії</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="text-align: center; margin-top: 40px">
+            <a href="#" class="cta-button">Купити обраний тариф</a>
+        </div>
+    </div>
+</section>
+
+    <section class="seo-text container">
+      <h2>Як працює страховий поліс «Медичний консьєрж»?</h2>
+      <p>
+        Медичне страхування від СК VUSO — це не просто папірець, а реальна
+        допомога в критичній ситуації. Оформлюючи поліс на нашому сайті, ви
+        отримуєте гарантований захист при гострих захворюваннях, травмах або
+        загостренні хронічних станів.
+      </p>
+
+      <h3>3 кроки до захисту:</h3>
+      <ol>
+        <li>
+          <strong>Оберіть програму:</strong> Від економної до преміальної.
+        </li>
+        <li>
+          <strong>Заповніть дані:</strong> Онлайн-анкета займає не більше 2-х
+          хвилин.
+        </li>
+        <li>
+          <strong>Отримайте поліс:</strong> Документ миттєво приходить на вашу
+          електронну пошту та діє по всій Україні.
+        </li>
+      </ol>
+
+<div id="contactModal" class="modal-overlay">
+    <div class="modal-content">
+        <button type="button" class="close-modal" id="closeModalBtn">&times;</button>
+        <div class="ftr-nav">
+            <img src="../img/e-polis-logo.svg" alt="лого є-поліс" width="80px" />
+            <p class="questions">Для оформлення напишіть нам:</p>
+            <ul class="nav-list">
+                <li><a href="viber://chat/?number=%2B380679170849"><img src="../img/free-icon-viber-3670059.webp" alt="viber" width="40px" /></a></li>
+                <li><a href="https://t.me/epolis_ua" target="_blank"><img src="../img/free-icon-telegram-2111646.webp" alt="tg" width="40px" /></a></li>
+                <li><a href="https://wa.me/380679170849"><img src="../img/whatsapp.svg" alt="wa" width="40px" /></a></li>
+                <li><a href="mailto:support@e-polis.net.ua"><img src="../img/free-icon-gmail-732200.webp" alt="mail" width="40px" /></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+      <p>
+        <em>Важливо:</em> При настанні страхового випадку просто зателефонуйте
+        0-800-303-911. Ми самі знайдемо лікаря, запишемо вас на прийом та
+        організуємо доставку ліків.
+      </p>
+    </section>
     </main>
 
-    <footer class="ftr">
+    
+<div class="menu-toggle-operator operator">
+        <img src="../img/operator.webp" alt="підтримка" width="100%" />
+      </div>
+     <footer class="ftr">
       <nav class="hdr-nav ftr-nav">
         <img
           class="logo ftr-logo"
           src="../img/e-polis-logo.svg"
-          alt="лого є-поліс"
+          alt="є-поліс"
           width="80px"
         />
 
@@ -642,7 +830,7 @@
           <li>
             <a
               href="https://instagram.com/epolis_info?igshid=NzZlODBkYWE4Ng==
-                "
+              "
             >
               <img
                 class="contact-logo ftr-contact-logo"
@@ -663,10 +851,148 @@
         </ul>
       </nav>
 
+      <div class="nbu-links-container">
+        <ul class="list">
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/contacts.html"
+              >Про нас</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/info-pro-poserednyka.html"
+              >Інформація про страхового посередника</a
+            ></ll
+          >
+          <ll
+            ><a target="_blank"
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://vuso.ua/informations"
+              >Інформація про страховика</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/polityka-konfiencijnosti.html"
+              >Політика конфіденційності</a
+            ></ll
+          >
+          <ll
+            ><a
+              rel="nofollow"
+              style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              "
+              href="https://www.e-polis.net.ua/pages/publichna-oferta.html"
+              >Публічна оферта</a
+            ></ll
+          >
+          <li>
+            <a style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/Загальні_умови_страхового_продукту_Медичний_консь_260129_173200.pdf">Інформаційний документ про стандартний страховий продукт "Медичний консьєрж"/a>
+          </li>
+
+          <li>
+            <a target="_blank" style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/зразок договору.pdf">Зразок договору страхування</a>
+          </li>
+<li>
+            <a target="_blank" style="
+                color: rgb(75, 75, 75);
+                text-decoration: none;
+                margin-bottom: 6px;
+              " href="../img/Програма страхового продукту_af075bff-95e6-4a6c-9a_260129_170703.pdf">Програми страхового продукту</a>
+          </li>
+      
+        </ul>
+      </div>
+
       <p class="copy">&copy; Всі права захищені</p>
     </footer>
+    <script type="module" src="../js/minified-main.js"></script>
 
-      <script type="module" src="../js/minified-main.js"></script>
+   <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('contactModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+    
+    // Функція відкриття модалки
+    function openModal() {
+        modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
+    }
 
+    // Функція закриття модалки
+    function closeModal() {
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    }
+
+    // Обробка ВСІХ кнопок з класом cta-button
+    document.querySelectorAll('.cta-button').forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const target = this.getAttribute('href');
+
+            if (target === '#compare') {
+                // Це кнопка з Hero - робимо плавний скрол
+                e.preventDefault();
+                const element = document.querySelector(target);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // Це всі інші кнопки (Купити) - відкриваємо модалку
+                e.preventDefault();
+                openModal();
+            }
+        });
+    });
+
+    // Закриття на хрестик
+    closeBtn.addEventListener('click', closeModal);
+
+    // Закриття при кліку на фон
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
+    });
+
+    // Закриття на клавішу Escape
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeModal();
+    });
+});
+</script>
   </body>
 </html>
