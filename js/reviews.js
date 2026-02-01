@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const loadMoreBtn = document.getElementById('epolis-load-more-btn');
 
   let reviewsData = [
+     {
+      name: 'Олексій',
+      rating: 5,
+      comment:
+        'Все организовано на высшем уровне. Менеджер всё оформил со своей стороны, я только оплатил. Разница в цене составила 657 гривен. Неплохая скидка! Дякую.',
+    },
     {
       name: 'Володимир',
       rating: 5,
