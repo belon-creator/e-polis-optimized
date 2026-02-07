@@ -69,7 +69,7 @@
       "@type": "AggregateRating",
       "ratingValue": "5",
       "bestRating": "5",
-      "reviewCount": "183"
+      "reviewCount": "209"
     },
     "category": [
       "Автоцивілка",
@@ -294,7 +294,172 @@
               />
             </div> -->
 
+            <div
+  id="e-polis-sync-block"
+  style="
+    margin: 25px auto;
+    max-width: 100%;
+    padding: 25px;
+    background: linear-gradient(
+      to bottom,
+      rgba(173, 216, 230, 0.5),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  "
+>
+  <div
+    style="
+      font-size: 12px;
+      color: #5e5e5f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    "
+  >
+    Оформлено сьогодні
+  </div>
+
+  <div
+    id="global-sync-counter"
+    style="
+      font-size: 64px;
+      font-weight: 800;
+      color: #2c3e50;
+      letter-spacing: -2px;
+      line-height: 1;
+    "
+  >
+    0
+  </div>
+
+  <div
+    style="
+      display: inline-flex;
+      align-items: center;
+      margin-top: 15px;
+      padding: 6px 14px;
+      background: #f2f2f7;
+      border-radius: 100px;
+      font-size: 13px;
+      color: #1c1c1e;
+      font-weight: 500;
+    "
+  >
+    <span
+      style="
+        width: 8px;
+        height: 8px;
+        background-color: #34c759;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
+      "
+    ></span>
+    Live оновлення
+  </div>
+
+  <script>
+    (function () {
+      const el = document.getElementById('global-sync-counter');
+
+      function getSeedTarget() {
+        const d = new Date();
+        const seed = d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
+        // Рандомна ціль дня: від 140 до 170
+        const val = Math.abs(Math.sin(seed) * 30);
+        return Math.floor(140 + val);
+      }
+
+      function getSyncValue() {
+        const now = new Date();
+        const h = now.getHours();
+        const m = now.getMinutes();
+        const s = h * 3600 + m * 60 + now.getSeconds();
+        
+        const target = getSeedTarget();
+        
+        // 1. Умова 00:00 - 00:05 — завжди 0
+        if (h === 0 && m < 5) {
+          return 0;
+        }
+
+        let progress;
+        // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
+        if (s < 32400) {
+          const startS = 300; // 5 хвилин у секундах
+          progress = ((s - startS) / (32400 - startS)) * 0.15;
+        } 
+        // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
+        else if (s < 72000) {
+          const dayProgress = (s - 32400) / 39600;
+          // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
+          const jitter = Math.sin(s * 0.001) * 0.02; 
+          progress = 0.15 + (dayProgress + jitter) * 0.75;
+        } 
+        // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
+        else {
+          progress = 0.9 + ((s - 72000) / 14400) * 0.1;
+        }
+
+        // Фінальний розрахунок
+        let result = Math.floor(target * progress);
+        
+        // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
+        if (s >= 300 && result < 1) result = 1;
+        
+        return Math.max(0, result);
+      }
+
+      // Анімований старт при першому завантаженні
+      let targetValue = getSyncValue();
+      let currentDisplay = 0;
+      
+      // Якщо значень багато, анімуємо швидше, якщо мало — по одному
+      const animationSteps = targetValue > 0 ? 50 : 1;
+      const step = Math.ceil(targetValue / animationSteps) || 1;
+
+      const timer = setInterval(() => {
+        if (targetValue === 0) {
+          el.innerText = "0";
+          clearInterval(timer);
+        } else {
+          currentDisplay += step;
+          if (currentDisplay >= targetValue) {
+            el.innerText = targetValue;
+            clearInterval(timer);
+          } else {
+            el.innerText = currentDisplay;
+          }
+        }
+      }, 30);
+
+      // Запуск циклу оновлення
+      // Використовуємо перевірку кожні 2 секунди
+      setTimeout(() => {
+          setInterval(() => {
+            const newVal = getSyncValue();
+            const currentVal = parseInt(el.innerText);
+            // Тільки зростання
+            if (newVal > currentVal) {
+              el.innerText = newVal;
+            }
+          }, 2000);
+      }, 1500);
+      
+    })();
+  </script>
+</div>
+
             <h3 class="about-list-title descr-heading">Чому обирати саме E-polis?</h3>
+
+            
 
           <ul class="list about-list">
             <li class="about-list-item fade-in-left top-gradient">

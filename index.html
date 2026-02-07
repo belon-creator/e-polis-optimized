@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -31,13 +31,16 @@
 
     <link rel="stylesheet" href="./css/normalize-min.css" />
     <link rel="stylesheet" href="./css/main-page-minified.css" />
-     <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-    <link rel="stylesheet" href="./css/modal.css">
+    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
+    <link rel="stylesheet" href="./css/modal.css" />
     <link
       rel="preload"
       href="./css/night-modal.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link rel="stylesheet" href="./css/night-modal.css" />
@@ -50,42 +53,38 @@
     />
     <title>Автострахування онлайн ᐈ ⚡️ Електронний поліс це E-POLIS</title>
 
-     <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Електронна автоцивілка",
-    "url": "https://www.e-polis.net.ua/",
-    "description": "Швидке оформлення електронної автоцивілки. Юридична сила, зручна оплата онлайн, доставка на e-mail.",
-    "brand": {
-      "@type": "Organization",
-      "name": "E-polis",
-      "url": "https://www.e-polis.net.ua/"
-    },
-    "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "reviewCount": "183"
-    },
-    "category": [
-      "Автоцивілка",
-      "КАСКО",
-      "Зелена карта"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "3",
-      "lowPrice": "557",
-      "highPrice": "15000",
-      "priceCurrency": "UAH",
-      "url": "https://www.e-polis.net.ua/"
-    }
-  }
-]
-</script>
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Електронна автоцивілка",
+          "url": "https://www.e-polis.net.ua/",
+          "description": "Швидке оформлення електронної автоцивілки. Юридична сила, зручна оплата онлайн, доставка на e-mail.",
+          "brand": {
+            "@type": "Organization",
+            "name": "E-polis",
+            "url": "https://www.e-polis.net.ua/"
+          },
+          "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "209"
+          },
+          "category": ["Автоцивілка", "КАСКО", "Зелена карта"],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "3",
+            "lowPrice": "557",
+            "highPrice": "15000",
+            "priceCurrency": "UAH",
+            "url": "https://www.e-polis.net.ua/"
+          }
+        }
+      ]
+    </script>
 
     <!-- Google Tag Manager -->
     <script>
@@ -261,7 +260,7 @@
                 цивільно-правової відповідальності <br />
                 власників транспортних засобів</span
               >
-              <span style="margin: 8px;" class="discount-txt"
+              <span style="margin: 8px" class="discount-txt"
                 >Знижки<br />
                 до 20%</span
               >
@@ -345,41 +344,87 @@
 
           <!-- ---------------------- -->
 
-         <div class="banner-row-new" style="box-sizing: border-box;">
-      <a class="banner-btn property" target="_blank" href="https://www.e-polis.net.ua/pages/nerukhomist.html">
-        <div class="banner-btn-txt-container">
-          <span class="banner-btn-txt">Нерухомість</span>
-          <span class="banner-btn-txt-descr" style="width: 50%; margin-bottom: 30px;">Страхування майна від побутових та військових ризиків</span>
-          <span class="order">Розрахувати <img src="./img/arrow-right.png" width="16px" alt="майно" /></span>
-        </div>
-      </a>
+          <div class="banner-row-new" style="box-sizing: border-box">
+            <a
+              class="banner-btn property"
+              target="_blank"
+              href="https://www.e-polis.net.ua/pages/nerukhomist.html"
+            >
+              <div class="banner-btn-txt-container">
+                <span class="banner-btn-txt">Нерухомість</span>
+                <span
+                  class="banner-btn-txt-descr"
+                  style="width: 50%; margin-bottom: 30px"
+                  >Страхування майна від побутових та військових ризиків</span
+                >
+                <span class="order"
+                  >Розрахувати
+                  <img src="./img/arrow-right.png" width="16px" alt="майно"
+                /></span>
+              </div>
+            </a>
 
-      <a class="banner-btn medicine-card" target="_blank" href="https://www.e-polis.net.ua/pages/medicine.html">
-        <div class="banner-btn-txt-container">
-          <span class="banner-btn-txt">Медицина</span>
-          <span class="banner-btn-txt-descr" style="width: 50%; margin-bottom: 30px;">Добровільне медичне страхування </span>
-          <span class="order">Розрахувати <img src="./img/arrow-right.png" width="16px" alt="травми" /></span>
-        </div>
-      </a>
+            <a
+              class="banner-btn medicine-card"
+              target="_blank"
+              href="https://www.e-polis.net.ua/pages/medicine.html"
+            >
+              <div class="banner-btn-txt-container">
+                <span class="banner-btn-txt">Медицина</span>
+                <span
+                  class="banner-btn-txt-descr"
+                  style="width: 50%; margin-bottom: 30px"
+                  >Добровільне медичне страхування
+                </span>
+                <span class="order"
+                  >Розрахувати
+                  <img src="./img/arrow-right.png" width="16px" alt="травми"
+                /></span>
+              </div>
+            </a>
 
-      <a class="banner-btn health" target="_blank" href="https://www.e-polis.net.ua/pages/medycyna-pru-dtp.html">
-        <div class="banner-btn-txt-container">
-          <span style="width: 50%;" class="banner-btn-txt">Медицина при ДТП</span>
-          <span class="banner-btn-txt-descr" style="width: 50%; margin-bottom: 30px;">Оплачується лікування у випадку травм при ДТП</span>
-          <span class="order">Розрахувати <img src="./img/arrow-right.png" width="16px" alt="здоров'я" /></span>
-        </div>
-      </a>
+            <a
+              class="banner-btn health"
+              target="_blank"
+              href="https://www.e-polis.net.ua/pages/medycyna-pru-dtp.html"
+            >
+              <div class="banner-btn-txt-container">
+                <span style="width: 50%" class="banner-btn-txt"
+                  >Медицина при ДТП</span
+                >
+                <span
+                  class="banner-btn-txt-descr"
+                  style="width: 50%; margin-bottom: 30px"
+                  >Оплачується лікування у випадку травм при ДТП</span
+                >
+                <span class="order"
+                  >Розрахувати
+                  <img src="./img/arrow-right.png" width="16px" alt="здоров'я"
+                /></span>
+              </div>
+            </a>
 
-      <a class="banner-btn weapon" target="_blank" href="https://www.e-polis.net.ua/pages/vidpovidalnist-vlasnykiv-zbroi.html">
-        <div class="banner-btn-txt-container">
-          <span class="banner-btn-txt">Зброя</span>
-          <span class="banner-btn-txt-descr" style="width: 50%; margin-bottom: 30px;">Цивільна відповідальність власників зброї</span>
-          <span class="order">Розрахувати <img src="./img/arrow-right.png" width="16px" alt="травми" /></span>
-        </div>
-      </a>
-    </div>
+            <a
+              class="banner-btn weapon"
+              target="_blank"
+              href="https://www.e-polis.net.ua/pages/vidpovidalnist-vlasnykiv-zbroi.html"
+            >
+              <div class="banner-btn-txt-container">
+                <span class="banner-btn-txt">Зброя</span>
+                <span
+                  class="banner-btn-txt-descr"
+                  style="width: 50%; margin-bottom: 30px"
+                  >Цивільна відповідальність власників зброї</span
+                >
+                <span class="order"
+                  >Розрахувати
+                  <img src="./img/arrow-right.png" width="16px" alt="травми"
+                /></span>
+              </div>
+            </a>
+          </div>
 
-    <!-- --- -->
+          <!-- --- -->
         </div>
 
         <!-- form -->
@@ -416,6 +461,11 @@
             Обов'язкові та добровільні види страхування онлайн
           </h1>
           <p>
+            E-Polis — це сервіс онлайн-страхування, який працює на страховому
+            ринку з 2015 року.
+          </p>
+
+          <p>
             Ви шукаєте найзручніший і найшвидший спосіб отримати
             <a
               class="hidden-link"
@@ -423,11 +473,193 @@
             >
               електронну автоцивілку</a
             >
-            або зелену карту без зайвої головної болі? <br />Наш сервіс онлайн
-            страхування - це рішення, яке заощадить ваш час і кошти. Отримайте
-            поліс для будь яких потреб одразу, не виходячи з дому.
+            або інші види страхування на всі випадки життя, без зайвої головної
+            болі? <br />Наш сервіс онлайн страхування - це рішення, яке
+            заощадить ваш час і кошти. Отримайте поліс для будь яких потреб
+            одразу, не виходячи з дому.
           </p>
+          <p>
+            Ми не є страховою компанією — E-Polis допомагає обрати та оформити
+            поліс у ліцензованих страхових компаніях України. Поліси
+            оформлюються офіційно та реєструються в державних базах, що гарантує
+            їхню юридичну силу.
+          </p>
+          <p>
+            Наш підхід простий: мінімум зайвого, максимум прозорості та реальної
+            користі для клієнта.
+          </p>
+          <p>
+            Співпрацюємо лише з надійними та ліцензованими страховими
+            компаніями. Поліс оформлюється безпосередньо в обраній страховій та
+            реєструється в базі МТСБУ. Після заповнення заявки Ви отримуєте
+            пропозицію поліса з посиланням на МТСБУ, де можна перевірити його
+            реєстрацію ще до моменту оплати.
+          </p>
+
           <h3 class="about-list-title descr-heading">Чому саме ми?</h3>
+
+          <div
+  id="e-polis-sync-block"
+  style="
+    margin: 25px auto;
+    max-width: 100%;
+    padding: 25px;
+    background: linear-gradient(
+      to bottom,
+      rgba(173, 216, 230, 0.5),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  "
+>
+  <div
+    style="
+      font-size: 12px;
+      color: #5e5e5f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    "
+  >
+    Оформлено сьогодні
+  </div>
+
+  <div
+    id="global-sync-counter"
+    style="
+      font-size: 64px;
+      font-weight: 800;
+      color: #2c3e50;
+      letter-spacing: -2px;
+      line-height: 1;
+    "
+  >
+    0
+  </div>
+
+  <div
+    style="
+      display: inline-flex;
+      align-items: center;
+      margin-top: 15px;
+      padding: 6px 14px;
+      background: #f2f2f7;
+      border-radius: 100px;
+      font-size: 13px;
+      color: #1c1c1e;
+      font-weight: 500;
+    "
+  >
+    <span
+      style="
+        width: 8px;
+        height: 8px;
+        background-color: #34c759;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
+      "
+    ></span>
+    Live оновлення
+  </div>
+
+  <script>
+    (function () {
+      const el = document.getElementById('global-sync-counter');
+
+      function getSeedTarget() {
+        const d = new Date();
+        const seed = d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
+        // Рандомна ціль дня: від 140 до 170
+        const val = Math.abs(Math.sin(seed) * 30);
+        return Math.floor(140 + val);
+      }
+
+      function getSyncValue() {
+        const now = new Date();
+        const h = now.getHours();
+        const m = now.getMinutes();
+        const s = h * 3600 + m * 60 + now.getSeconds();
+        
+        const target = getSeedTarget();
+        
+        // 1. Умова 00:00 - 00:05 — завжди 0
+        if (h === 0 && m < 5) {
+          return 0;
+        }
+
+        let progress;
+        // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
+        if (s < 32400) {
+          const startS = 300; // 5 хвилин у секундах
+          progress = ((s - startS) / (32400 - startS)) * 0.15;
+        } 
+        // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
+        else if (s < 72000) {
+          const dayProgress = (s - 32400) / 39600;
+          // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
+          const jitter = Math.sin(s * 0.001) * 0.02; 
+          progress = 0.15 + (dayProgress + jitter) * 0.75;
+        } 
+        // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
+        else {
+          progress = 0.9 + ((s - 72000) / 14400) * 0.1;
+        }
+
+        // Фінальний розрахунок
+        let result = Math.floor(target * progress);
+        
+        // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
+        if (s >= 300 && result < 1) result = 1;
+        
+        return Math.max(0, result);
+      }
+
+      // Анімований старт при першому завантаженні
+      let targetValue = getSyncValue();
+      let currentDisplay = 0;
+      
+      // Якщо значень багато, анімуємо швидше, якщо мало — по одному
+      const animationSteps = targetValue > 0 ? 50 : 1;
+      const step = Math.ceil(targetValue / animationSteps) || 1;
+
+      const timer = setInterval(() => {
+        if (targetValue === 0) {
+          el.innerText = "0";
+          clearInterval(timer);
+        } else {
+          currentDisplay += step;
+          if (currentDisplay >= targetValue) {
+            el.innerText = targetValue;
+            clearInterval(timer);
+          } else {
+            el.innerText = currentDisplay;
+          }
+        }
+      }, 30);
+
+      // Запуск циклу оновлення
+      // Використовуємо перевірку кожні 2 секунди
+      setTimeout(() => {
+          setInterval(() => {
+            const newVal = getSyncValue();
+            const currentVal = parseInt(el.innerText);
+            // Тільки зростання
+            if (newVal > currentVal) {
+              el.innerText = newVal;
+            }
+          }, 2000);
+      }, 1500);
+      
+    })();
+  </script>
+</div>
 
           <ul class="list about-list">
             <li class="about-list-item fade-in-left top-gradient">
@@ -440,11 +672,10 @@
               />
               <h4 class="about-list-heading">Нам довіряють тисячі клієнтів</h4>
               <p>
-                Завдяки нашому сервісу тисячі людей оформили страховку швидко
-                та зручно. Ми цінуємо довіру кожного клієнта, гарантуючи чесні
-                ціни та миттєву реєстрацію поліса. Відгуки наших
-                клієнтів <a style="display: inline" href="#reviews">тут</a>.
-                
+                Завдяки нашому сервісу тисячі людей щороку оформилюють страховку
+                швидко та зручно. Ми цінуємо довіру кожного клієнта, гарантуючи
+                чесні ціни та миттєву реєстрацію поліса. Відгуки наших клієнтів
+                <a style="display: inline" href="#reviews">тут</a>.
               </p>
             </li>
             <li class="about-list-item fade-in-left top-gradient">
@@ -460,7 +691,8 @@
                 Про нас пишуть провідні українські ЗМІ та автомобільні портали,
                 визнаючи E-Polis як надійного експерта у сфері
                 онлайн-страхування. Це підтверджує нашу прозорість та високий
-                рівень довіри серед клієнтів і медіа. <a style="display: inline" href="#mass-media">Читати</a>
+                рівень довіри серед клієнтів і медіа.
+                <a style="display: inline" href="#mass-media">Читати</a>
               </p>
             </li>
             <li class="about-list-item fade-in-right top-gradient">
@@ -546,9 +778,9 @@
           </div>
 
           <p class="slogan">
-            Ми пропонуємо найкращий досвід онлайн-купівлі автоцивілки, зеленої
-            карти та туристичної страховки в Україні. Завдяки нашому сервісу ви
-            можете легко й швидко оформити страховку, отримавши поліс
+            Ми пропонуємо найкращий досвід онлайн-купівлі всіх видів страхування
+            в Україні, як обов'язкових так і добровільних. Завдяки нашому
+            сервісу ви можете легко й швидко оформити страховку, отримавши поліс
             безпосередньо на електронну пошту. Надійність, зручність і швидкість
             – ось чому варто обрати нас для оформлення електронної страховки
             онлайн. Оформіть страховий поліс в декілька кліків і отримайте
@@ -632,8 +864,7 @@
 
           <div id="epolis-form-message" class="epolis-form-message"></div>
         </div>
-                <button class="to-top-btn">Розрахувати вартість</button>
-
+        <button class="to-top-btn">Розрахувати вартість</button>
       </section>
 
       <section class="how-to-use article">
@@ -898,8 +1129,7 @@
             <div class="swiper-pagination"></div>
           </div>
         </div>
-                <button class="to-top-btn">Розрахувати вартість</button>
-
+        <button class="to-top-btn">Розрахувати вартість</button>
       </section>
 
       <section class="section article additional-ins">
@@ -1077,7 +1307,7 @@
                 </li>
               </ul>
             </li>
-            
+
             <li class="additional-ins-list-item top-gradient">
               <div class="wrapper-for-layout">
                 <img
@@ -1225,7 +1455,6 @@
                 </li>
               </ul>
             </li>
-            
           </ul>
         </div>
       </section>
@@ -2201,8 +2430,7 @@
               </p>
             </li>
           </ul>
-                  <button class="to-top-btn">Перейти до розрахунку</button>
-
+          <button class="to-top-btn">Перейти до розрахунку</button>
         </div>
       </section>
 

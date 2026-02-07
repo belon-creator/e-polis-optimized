@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -211,7 +211,189 @@
 
           <p class="hdr-descr">
             E-polis - це онлайн-сервіс, що пропонує широкий спектр страхових
-            послуг для вас, вашого авто та близьких. З нами ви можете оформити:
+            послуг для вас, вашого авто та близьких.
+          </p>
+          <p>
+            Ми починали як невеликий локальний страховий офіс, де добре знали
+            своїх клієнтів і супроводжували кожен поліс вручну — від підбору
+            програми до консультацій після оформлення. Цей досвід дав нам
+            головне розуміння: у страхуванні важливі не гучні обіцянки, а
+            прозорі умови, коректне оформлення та відповідальність перед
+            клієнтом.
+          </p>
+          <p>
+            З 2023 року E-Polis працює як всеукраїнський сервіс
+            онлайн-страхування. Ми поєднали офлайн-досвід із сучасними цифровими
+            інструментами, щоб клієнти з будь-якого регіону України могли
+            оформлювати страхові поліси швидко, зручно та офіційно — без
+            відвідування офісів.
+          </p>
+
+<div
+  id="e-polis-sync-block"
+  style="
+    margin: 25px auto;
+    max-width: 100%;
+    padding: 25px;
+    background: linear-gradient(
+      to bottom,
+      rgba(173, 216, 230, 0.5),
+      rgba(255, 255, 255, 0)
+    );
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #f0f0f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  "
+>
+  <div
+    style="
+      font-size: 12px;
+      color: #5e5e5f;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+      font-weight: 700;
+    "
+  >
+    Сьогодні оформлено страховок
+  </div>
+
+  <div
+    id="global-sync-counter"
+    style="
+      font-size: 64px;
+      font-weight: 800;
+      color: #2c3e50;
+      letter-spacing: -2px;
+      line-height: 1;
+    "
+  >
+    0
+  </div>
+
+  <div
+    style="
+      display: inline-flex;
+      align-items: center;
+      margin-top: 15px;
+      padding: 6px 14px;
+      background: #f2f2f7;
+      border-radius: 100px;
+      font-size: 13px;
+      color: #1c1c1e;
+      font-weight: 500;
+    "
+  >
+    <span
+      style="
+        width: 8px;
+        height: 8px;
+        background-color: #34c759;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 8px;
+        box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
+      "
+    ></span>
+    Live оновлення
+  </div>
+
+  <script>
+    (function () {
+      const el = document.getElementById('global-sync-counter');
+
+      function getSeedTarget() {
+        const d = new Date();
+        const seed = d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
+        // Рандомна ціль дня: від 140 до 170
+        const val = Math.abs(Math.sin(seed) * 30);
+        return Math.floor(140 + val);
+      }
+
+      function getSyncValue() {
+        const now = new Date();
+        const h = now.getHours();
+        const m = now.getMinutes();
+        const s = h * 3600 + m * 60 + now.getSeconds();
+        
+        const target = getSeedTarget();
+        
+        // 1. Умова 00:00 - 00:05 — завжди 0
+        if (h === 0 && m < 5) {
+          return 0;
+        }
+
+        let progress;
+        // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
+        if (s < 32400) {
+          const startS = 300; // 5 хвилин у секундах
+          progress = ((s - startS) / (32400 - startS)) * 0.15;
+        } 
+        // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
+        else if (s < 72000) {
+          const dayProgress = (s - 32400) / 39600;
+          // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
+          const jitter = Math.sin(s * 0.001) * 0.02; 
+          progress = 0.15 + (dayProgress + jitter) * 0.75;
+        } 
+        // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
+        else {
+          progress = 0.9 + ((s - 72000) / 14400) * 0.1;
+        }
+
+        // Фінальний розрахунок
+        let result = Math.floor(target * progress);
+        
+        // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
+        if (s >= 300 && result < 1) result = 1;
+        
+        return Math.max(0, result);
+      }
+
+      // Анімований старт при першому завантаженні
+      let targetValue = getSyncValue();
+      let currentDisplay = 0;
+      
+      // Якщо значень багато, анімуємо швидше, якщо мало — по одному
+      const animationSteps = targetValue > 0 ? 50 : 1;
+      const step = Math.ceil(targetValue / animationSteps) || 1;
+
+      const timer = setInterval(() => {
+        if (targetValue === 0) {
+          el.innerText = "0";
+          clearInterval(timer);
+        } else {
+          currentDisplay += step;
+          if (currentDisplay >= targetValue) {
+            el.innerText = targetValue;
+            clearInterval(timer);
+          } else {
+            el.innerText = currentDisplay;
+          }
+        }
+      }, 30);
+
+      // Запуск циклу оновлення
+      // Використовуємо перевірку кожні 2 секунди
+      setTimeout(() => {
+          setInterval(() => {
+            const newVal = getSyncValue();
+            const currentVal = parseInt(el.innerText);
+            // Тільки зростання
+            if (newVal > currentVal) {
+              el.innerText = newVal;
+            }
+          }, 2000);
+      }, 1500);
+      
+    })();
+  </script>
+</div>
+
+          <p>
+            Сьогодні E-Polis надає широкий спектр страхових послуг, зокрема:
           </p>
           <ul class="list">
             <li class="questions-list-item">
@@ -224,6 +406,17 @@
                 class="link-on-accent-bg"
                 href="https://www.e-polis.net.ua/pages/elektronna-avtocyvilka.html"
                 >Електронна автоцивілка</a
+              >
+            </li>
+            <li class="questions-list-item">
+              <h3 class="questions-list-heading">КАСКО</h3>
+              <p class="questions-list-descr">
+                Захист вашого авто від пошкоджень, крадіжки та інших ризиків.
+              </p>
+              <a
+                class="link-on-accent-bg"
+                href="https://www.e-polis.net.ua/kasko/"
+                >КАСКО на авто онлайн</a
               >
             </li>
             <li class="questions-list-item">
@@ -264,9 +457,14 @@
               >
             </li>
             <li class="questions-list-item">
-              <h3 class="questions-list-heading">Медичне страхування при ДТП</h3>
+              <h3 class="questions-list-heading">
+                Медичне страхування при ДТП
+              </h3>
               <p class="questions-list-descr">
-Не важливо ким була застрахована людина під час ДТП (водій, пасажир, пішохд, велосипедист...), оплачується лікування в наслідок ДТП             </p>
+                Не важливо ким була застрахована людина під час ДТП (водій,
+                пасажир, пішохд, велосипедист...), оплачується лікування в
+                наслідок ДТП
+              </p>
               <a
                 class="link-on-accent-bg"
                 href="https://www.e-polis.net.ua/pages/medycyna-pru-dtp.html"
@@ -276,7 +474,9 @@
             <li class="questions-list-item">
               <h3 class="questions-list-heading">Зброя</h3>
               <p class="questions-list-descr">
-Страхування цивільної відповідальності власників зброї за шкоду завдану майну та здоров'ю              </p>
+                Страхування цивільної відповідальності власників зброї за шкоду
+                завдану майну та здоров'ю
+              </p>
               <a
                 class="link-on-accent-bg"
                 href="https://www.e-polis.net.ua/pages/vidpovidalnist-vlasnykiv-zbroi.html"
@@ -307,17 +507,6 @@
                 class="link-on-accent-bg"
                 href="https://www.e-polis.net.ua/pages/neshcasni-vypadky.html"
                 >Програми страхування від нещасних випадків</a
-              >
-            </li>
-            <li class="questions-list-item">
-              <h3 class="questions-list-heading">КАСКО</h3>
-              <p class="questions-list-descr">
-                Захист вашого авто від пошкоджень, крадіжки та інших ризиків.
-              </p>
-              <a
-                class="link-on-accent-bg"
-                href="https://www.e-polis.net.ua/kasko/"
-                >КАСКО на авто онлайн</a
               >
             </li>
           </ul>
