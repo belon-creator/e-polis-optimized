@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -26,16 +26,19 @@
 
     <link rel="stylesheet" href="../css/normalize-min.css" />
     <link rel="stylesheet" href="../css/main-page-minified.css" />
-    <link rel="stylesheet" href="../css/pages-minified.css" />  
-     <link
+    <link rel="stylesheet" href="../css/pages-minified.css" />
+    <link
       rel="preload"
       href="../css/night-modal.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link rel="stylesheet" href="../css/night-modal.css" />
-    </noscript>  
+    </noscript>
 
     <link
       rel="shortcut icon"
@@ -43,43 +46,38 @@
       type="image/x-icon"
     />
 
-   <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Електронна автоцивілка",
-    "url": "https://www.e-polis.net.ua/ru/auto-insurance.html",
-    "description": "Швидке оформлення електронної автоцивілки. Юридична сила, зручна оплата онлайн, доставка на e-mail.",
-    "brand": {
-      "@type": "Organization",
-      "name": "E-polis",
-      "url": "https://www.e-polis.net.ua/"
-    },
-    "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "reviewCount": "209"
-    },
-    "category": [
-      "Автоцивілка",
-      "КАСКО",
-      "Зелена карта"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "3",
-      "lowPrice": "557",
-      "highPrice": "15000",
-      "priceCurrency": "UAH",
-      "url": "https://www.e-polis.net.ua/ru/auto-insurance.html"
-    }
-  }
-]
-</script>
-
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Електронна автоцивілка",
+          "url": "https://www.e-polis.net.ua/ru/auto-insurance.html",
+          "description": "Швидке оформлення електронної автоцивілки. Юридична сила, зручна оплата онлайн, доставка на e-mail.",
+          "brand": {
+            "@type": "Organization",
+            "name": "E-polis",
+            "url": "https://www.e-polis.net.ua/"
+          },
+          "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "209"
+          },
+          "category": ["Автоцивілка", "КАСКО", "Зелена карта"],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "3",
+            "lowPrice": "557",
+            "highPrice": "15000",
+            "priceCurrency": "UAH",
+            "url": "https://www.e-polis.net.ua/ru/auto-insurance.html"
+          }
+        }
+      ]
+    </script>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -247,7 +245,7 @@
       <section class="banner">
         <h1 class="descr-heading">Автострахование онлайн</h1>
         <div class="container">
-          <a
+          <a style="padding: 40px;"
             class="banner-btn avtocyvilka"
             target="_blank"
             rel="nofollow"
@@ -263,7 +261,7 @@
                 >Скидки<br />
                 20%</span
               >
-              <span class="order"
+              <span class="order" style="margin-top: 16px;"
                 >Рассчитать
                 <img
                   src="../img/arrow-right.png"
@@ -273,7 +271,7 @@
             </div>
           </a>
 
-          <a
+          <a style="width: 100%; padding: 40px;"
             class="banner-btn international-ins kasko-bg-banner"
             target="_blank"
             href="https://www.e-polis.net.ua/kasko/"
@@ -287,14 +285,14 @@
                 >Скидка<br />
                 10%</span
               >
-              <span class="order"
+              <span class="order" style="margin-top: 16px;"
                 >Рассчитать
                 <img src="../img/arrow-right.png" width="16px" alt="туризм"
               /></span>
             </div>
           </a>
 
-          <a
+          <a style="width: 100%; padding: 40px;"
             class="banner-btn international-ins green-card"
             target="_blank"
             rel="nofollow"
@@ -309,7 +307,7 @@
                 >Скидки<br />
                 10%</span
               >
-              <span class="order"
+              <span class="order" style="margin-top: 16px;"
                 >Рассчитать
                 <img
                   src="../img/arrow-right.png"
@@ -318,170 +316,192 @@
               /></span>
             </div>
           </a>
+
+           <a style="width: 100%; padding: 40px;"           
+              class="banner-btn health"
+              target="_blank"
+              href="https://www.e-polis.net.ua/pages/medycyna-pru-dtp.html"
+            >
+              <div class="banner-btn-txt-container">
+                <span class="banner-btn-txt"
+                  >Медицина при ДТП</span
+                >
+                <span
+                  class="banner-btn-txt-descr"
+                  style="margin-bottom: 30px"
+                  >Оплачивается лечение в случае травм при ДТП</span
+                >
+                <span class="order" style="margin-top: 16px;"
+                  >Рассчитать
+                  <img src="../img/arrow-right.png" width="16px" alt="здоров'я"
+                /></span>
+              </div>
+            </a>
         </div>
 
         <div
-  id="e-polis-sync-block"
-  style="
-    margin: 25px auto;
-    max-width: 100%;
-    padding: 25px;
-    background: linear-gradient(
-      to bottom,
-      rgba(173, 216, 230, 0.5),
-      rgba(255, 255, 255, 0)
-    );
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  "
->
-  <div
-    style="
-      font-size: 12px;
-      color: #5e5e5f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 5px;
-      font-weight: 700;
-    "
-  >
-    Оформлено сегодня
-  </div>
+          id="e-polis-sync-block"
+          style="
+            margin: 25px auto;
+            max-width: 100%;
+            padding: 25px;
+            background: linear-gradient(
+              to bottom,
+              rgba(173, 216, 230, 0.5),
+              rgba(255, 255, 255, 0)
+            );
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            font-family:
+              -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          "
+        >
+          <div
+            style="
+              font-size: 12px;
+              color: #5e5e5f;
+              text-transform: uppercase;
+              letter-spacing: 2px;
+              margin-bottom: 5px;
+              font-weight: 700;
+            "
+          >
+            Оформлено сегодня
+          </div>
 
-  <div
-    id="global-sync-counter"
-    style="
-      font-size: 64px;
-      font-weight: 800;
-      color: #2c3e50;
-      letter-spacing: -2px;
-      line-height: 1;
-    "
-  >
-    0
-  </div>
+          <div
+            id="global-sync-counter"
+            style="
+              font-size: 64px;
+              font-weight: 800;
+              color: #2c3e50;
+              letter-spacing: -2px;
+              line-height: 1;
+            "
+          >
+            0
+          </div>
 
-  <div
-    style="
-      display: inline-flex;
-      align-items: center;
-      margin-top: 15px;
-      padding: 6px 14px;
-      background: #f2f2f7;
-      border-radius: 100px;
-      font-size: 13px;
-      color: #1c1c1e;
-      font-weight: 500;
-    "
-  >
-    <span
-      style="
-        width: 8px;
-        height: 8px;
-        background-color: #34c759;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 8px;
-        box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
-      "
-    ></span>
-    Live ообновление
-  </div>
+          <div
+            style="
+              display: inline-flex;
+              align-items: center;
+              margin-top: 15px;
+              padding: 6px 14px;
+              background: #f2f2f7;
+              border-radius: 100px;
+              font-size: 13px;
+              color: #1c1c1e;
+              font-weight: 500;
+            "
+          >
+            <span
+              style="
+                width: 8px;
+                height: 8px;
+                background-color: #34c759;
+                border-radius: 50%;
+                display: inline-block;
+                margin-right: 8px;
+                box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
+              "
+            ></span>
+            Live обновление
+          </div>
 
-  <script>
-    (function () {
-      const el = document.getElementById('global-sync-counter');
+          <script>
+            (function () {
+              const el = document.getElementById('global-sync-counter');
 
-      function getSeedTarget() {
-        const d = new Date();
-        const seed = d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
-        // Рандомна ціль дня: від 140 до 170
-        const val = Math.abs(Math.sin(seed) * 30);
-        return Math.floor(140 + val);
-      }
+              function getSeedTarget() {
+                const d = new Date();
+                const seed =
+                  d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
+                // Рандомна ціль дня: від 140 до 170
+                const val = Math.abs(Math.sin(seed) * 30);
+                return Math.floor(140 + val);
+              }
 
-      function getSyncValue() {
-        const now = new Date();
-        const h = now.getHours();
-        const m = now.getMinutes();
-        const s = h * 3600 + m * 60 + now.getSeconds();
-        
-        const target = getSeedTarget();
-        
-        // 1. Умова 00:00 - 00:05 — завжди 0
-        if (h === 0 && m < 5) {
-          return 0;
-        }
+              function getSyncValue() {
+                const now = new Date();
+                const h = now.getHours();
+                const m = now.getMinutes();
+                const s = h * 3600 + m * 60 + now.getSeconds();
 
-        let progress;
-        // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
-        if (s < 32400) {
-          const startS = 300; // 5 хвилин у секундах
-          progress = ((s - startS) / (32400 - startS)) * 0.15;
-        } 
-        // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
-        else if (s < 72000) {
-          const dayProgress = (s - 32400) / 39600;
-          // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
-          const jitter = Math.sin(s * 0.001) * 0.02; 
-          progress = 0.15 + (dayProgress + jitter) * 0.75;
-        } 
-        // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
-        else {
-          progress = 0.9 + ((s - 72000) / 14400) * 0.1;
-        }
+                const target = getSeedTarget();
 
-        // Фінальний розрахунок
-        let result = Math.floor(target * progress);
-        
-        // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
-        if (s >= 300 && result < 1) result = 1;
-        
-        return Math.max(0, result);
-      }
+                // 1. Умова 00:00 - 00:05 — завжди 0
+                if (h === 0 && m < 5) {
+                  return 0;
+                }
 
-      // Анімований старт при першому завантаженні
-      let targetValue = getSyncValue();
-      let currentDisplay = 0;
-      
-      // Якщо значень багато, анімуємо швидше, якщо мало — по одному
-      const animationSteps = targetValue > 0 ? 50 : 1;
-      const step = Math.ceil(targetValue / animationSteps) || 1;
+                let progress;
+                // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
+                if (s < 32400) {
+                  const startS = 300; // 5 хвилин у секундах
+                  progress = ((s - startS) / (32400 - startS)) * 0.15;
+                }
+                // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
+                else if (s < 72000) {
+                  const dayProgress = (s - 32400) / 39600;
+                  // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
+                  const jitter = Math.sin(s * 0.001) * 0.02;
+                  progress = 0.15 + (dayProgress + jitter) * 0.75;
+                }
+                // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
+                else {
+                  progress = 0.9 + ((s - 72000) / 14400) * 0.1;
+                }
 
-      const timer = setInterval(() => {
-        if (targetValue === 0) {
-          el.innerText = "0";
-          clearInterval(timer);
-        } else {
-          currentDisplay += step;
-          if (currentDisplay >= targetValue) {
-            el.innerText = targetValue;
-            clearInterval(timer);
-          } else {
-            el.innerText = currentDisplay;
-          }
-        }
-      }, 30);
+                // Фінальний розрахунок
+                let result = Math.floor(target * progress);
 
-      // Запуск циклу оновлення
-      // Використовуємо перевірку кожні 2 секунди
-      setTimeout(() => {
-          setInterval(() => {
-            const newVal = getSyncValue();
-            const currentVal = parseInt(el.innerText);
-            // Тільки зростання
-            if (newVal > currentVal) {
-              el.innerText = newVal;
-            }
-          }, 2000);
-      }, 1500);
-      
-    })();
-  </script>
-</div>
+                // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
+                if (s >= 300 && result < 1) result = 1;
+
+                return Math.max(0, result);
+              }
+
+              // Анімований старт при першому завантаженні
+              let targetValue = getSyncValue();
+              let currentDisplay = 0;
+
+              // Якщо значень багато, анімуємо швидше, якщо мало — по одному
+              const animationSteps = targetValue > 0 ? 50 : 1;
+              const step = Math.ceil(targetValue / animationSteps) || 1;
+
+              const timer = setInterval(() => {
+                if (targetValue === 0) {
+                  el.innerText = '0';
+                  clearInterval(timer);
+                } else {
+                  currentDisplay += step;
+                  if (currentDisplay >= targetValue) {
+                    el.innerText = targetValue;
+                    clearInterval(timer);
+                  } else {
+                    el.innerText = currentDisplay;
+                  }
+                }
+              }, 30);
+
+              // Запуск циклу оновлення
+              // Використовуємо перевірку кожні 2 секунди
+              setTimeout(() => {
+                setInterval(() => {
+                  const newVal = getSyncValue();
+                  const currentVal = parseInt(el.innerText);
+                  // Тільки зростання
+                  if (newVal > currentVal) {
+                    el.innerText = newVal;
+                  }
+                }, 2000);
+              }, 1500);
+            })();
+          </script>
+        </div>
 
         <div class="container">
           <p class="hero-text">
@@ -490,36 +510,167 @@
             получили лучшую цену и надёжную защиту.
           </p>
         </div>
-
-        <!-- form -->
-        <!-- Форма замовлення -->
-        <!-- <div class="overlay"></div>
-        <div class="form-container">
-          <button class="close-form">✖</button>
-          <h2 id="selected-product"></h2>
-
-          <form id="insurance-form">
-            <label for="name">Ім'я:</label>
-            <input type="text" id="name" required />
-
-            <label for="phone">Номер телефону:</label>
-            <input type="text" id="phone" placeholder="+380" required />
-
-            <label for="comment">Коментар:</label>
-            <textarea
-              id="comment"
-              placeholder="Додайте свої побажання"
-            ></textarea>
-
-            <button class="submit-btn" type="submit" disabled>
-              Відправити
-            </button>
-          </form>
-        </div> -->
-        <!-- End form -->
       </section>
 
-      <section>
+      <section
+        style="
+          padding: 50px 0;
+          background-color: #f8fafc;
+          font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        "
+      >
+        <div
+          class="container"
+          style="max-width: 800px; margin: 0 auto; padding: 0 20px"
+        >
+          <h2
+            style="
+              font-size: 32px;
+              color: #1e293b;
+              margin-bottom: 30px;
+              text-align: center;
+              font-weight: 700;
+            "
+          >
+            Почему выбирают E-Polis?
+          </h2>
+
+          <ul style="list-style: none; padding: 0; margin: 0">
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span>
+                Нам доверяют тысячи автовладельцев.
+                <a
+                  href="#reviews"
+                  style="
+                    display: inline-block;
+                    color: #2563eb;
+                    text-decoration: none;
+                    font-weight: 600;
+                    border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+                    margin-left: 5px;
+                  "
+                  >Отзывы здесь</a
+                >
+              </span>
+            </li>
+
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span>
+                О нас пишут СМИ и автомобильные порталы.
+                <a
+                  href="#mass-media"
+                  style="
+                    display: inline-block;
+                    color: #2563eb;
+                    text-decoration: none;
+                    font-weight: 600;
+                    border-bottom: 1px solid rgba(37, 99, 235, 0.3);
+                    margin-left: 5px;
+                  "
+                  >Читать</a
+                >
+              </span>
+            </li>
+
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span
+                >Оформление ОСАГО, КАСКО и Зеленой карты онлайн за 5
+                минут.</span
+              >
+            </li>
+
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span>Калькулятор ОСАГО с актуальными тарифами.</span>
+            </li>
+
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span>Электронная страховка сразу на email.</span>
+            </li>
+
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span>Сотрудничество только с проверенными компаниями.</span>
+            </li>
+
+            <li
+              style="
+                margin-bottom: 18px;
+                font-size: 18px;
+                color: #334155;
+                line-height: 1.5;
+                display: flex;
+                align-items: flex-start;
+              "
+            >
+              <span style="margin-right: 12px; flex-shrink: 0">🔹</span>
+              <span style="font-weight: 500; color: #0f172a"
+                >Поддержка 24/7 — мы всегда на связи.</span
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- <section>
         <div class="container">
           <h2>Почему выбирают E-Polis?</h2>
           <ul>
@@ -539,7 +690,7 @@
             <li>🔹 Поддержка 24/7 — мы всегда на связи.</li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <section>
         <div class="container">
@@ -553,8 +704,6 @@
           </p>
         </div>
       </section>
-
-      
 
       <section class="epolis-media-section" id="mass-media">
         <div class="epolis-container container">
@@ -1168,6 +1317,5 @@
     <script type="module" src="../js/reviews.js" defer></script>
     <script type="module" src="../js/minified-main.js"></script>
     <script type="module" src="../js/night-modal.js" defer></script>
-
   </body>
 </html>
