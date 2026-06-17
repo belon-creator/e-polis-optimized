@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -34,7 +34,10 @@
       rel="preload"
       href="../css/night-modal.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link rel="stylesheet" href="../css/night-modal.css" />
@@ -50,43 +53,55 @@
       E-Polis
     </title>
 
-   <script type="application/ld+json">
-[
-  {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    "name": "Страховка на авто",
-    "url": "https://e-polis.net.ua/pages/issue-oscpv.html",
-    "description": "Швидке оформлення електронної автоцивілки. Юридична сила, зручна оплата онлайн, доставка на e-mail.",
-    "brand": {
-      "@type": "Organization",
-      "name": "E-polis",
-      "url": "https://www.e-polis.net.ua/"
-    },
-    "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5",
-      "bestRating": "5",
-      "reviewCount": "274"
-    },
-    "category": [
-      "Автоцивілка",
-      "КАСКО",
-      "Зелена карта"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "3",
-      "lowPrice": "557",
-      "highPrice": "15000",
-      "priceCurrency": "UAH",
-      "url": "https://e-polis.net.ua/pages/issue-oscpv.html"
-    }
-  }
-]
-</script>
+    <script type="application/ld+json">
+      [
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "Страховка на авто",
+          "url": "https://e-polis.net.ua/pages/issue-oscpv.html",
+          "description": "Швидке оформлення електронної автоцивілки. Юридична сила, зручна оплата онлайн, доставка на e-mail.",
+          "brand": {
+            "@type": "Organization",
+            "name": "E-polis",
+            "url": "https://www.e-polis.net.ua/"
+          },
+          "image": "https://www.e-polis.net.ua/fb-banner-new.webp",
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "reviewCount": "325"
+          },
+          "category": ["Автоцивілка", "КАСКО", "Зелена карта"],
+          "offers": {
+            "@type": "AggregateOffer",
+            "offerCount": "3",
+            "lowPrice": "557",
+            "highPrice": "15000",
+            "priceCurrency": "UAH",
+            "url": "https://e-polis.net.ua/pages/issue-oscpv.html"
+          }
+        }
+      ]
+    </script>
 
+    <style>
+      .insurance-type {
+        border: 1px solid #2c3e50;
+        border-radius: 30px;
+        padding: 8px;
+        margin: 8px;
+
+        background: linear-gradient(
+          to bottom,
+          rgba(173, 216, 230, 0.5),
+          rgba(255, 255, 255, 0)
+        );
+        z-index: 0;
+        pointer-events: none;
+      }
+    </style>
 
     <!-- Google Tag Manager -->
     <script>
@@ -251,7 +266,6 @@
           <h1>Оформити страховку на авто онлайн</h1>
         </div>
 
-         
         <div class="container">
           <a
             class="banner-btn avtocyvilka"
@@ -331,167 +345,168 @@
       </section>
 
       <div
-  id="e-polis-sync-block"
-  style="
-    margin: 25px auto;
-    max-width: 100%;
-    padding: 25px;
-    background: linear-gradient(
-      to bottom,
-      rgba(173, 216, 230, 0.5),
-      rgba(255, 255, 255, 0)
-    );
-    border-radius: 20px;
-    text-align: center;
-    border: 1px solid #f0f0f0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  "
->
-  <div
-    style="
-      font-size: 12px;
-      color: #5e5e5f;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 5px;
-      font-weight: 700;
-    "
-  >
-    Оформлено сьогодні
-  </div>
+        id="e-polis-sync-block"
+        style="
+          margin: 25px auto;
+          max-width: 100%;
+          padding: 25px;
+          background: linear-gradient(
+            to bottom,
+            rgba(173, 216, 230, 0.5),
+            rgba(255, 255, 255, 0)
+          );
+          border-radius: 20px;
+          text-align: center;
+          border: 1px solid #f0f0f0;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+          font-family:
+            -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        "
+      >
+        <div
+          style="
+            font-size: 12px;
+            color: #5e5e5f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+            font-weight: 700;
+          "
+        >
+          Оформлено сьогодні
+        </div>
 
-  <div
-    id="global-sync-counter"
-    style="
-      font-size: 64px;
-      font-weight: 800;
-      color: #2c3e50;
-      letter-spacing: -2px;
-      line-height: 1;
-    "
-  >
-    0
-  </div>
+        <div
+          id="global-sync-counter"
+          style="
+            font-size: 64px;
+            font-weight: 800;
+            color: #2c3e50;
+            letter-spacing: -2px;
+            line-height: 1;
+          "
+        >
+          0
+        </div>
 
-  <div
-    style="
-      display: inline-flex;
-      align-items: center;
-      margin-top: 15px;
-      padding: 6px 14px;
-      background: #f2f2f7;
-      border-radius: 100px;
-      font-size: 13px;
-      color: #1c1c1e;
-      font-weight: 500;
-    "
-  >
-    <span
-      style="
-        width: 8px;
-        height: 8px;
-        background-color: #34c759;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 8px;
-        box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
-      "
-    ></span>
-    Live оновлення
-  </div>
+        <div
+          style="
+            display: inline-flex;
+            align-items: center;
+            margin-top: 15px;
+            padding: 6px 14px;
+            background: #f2f2f7;
+            border-radius: 100px;
+            font-size: 13px;
+            color: #1c1c1e;
+            font-weight: 500;
+          "
+        >
+          <span
+            style="
+              width: 8px;
+              height: 8px;
+              background-color: #34c759;
+              border-radius: 50%;
+              display: inline-block;
+              margin-right: 8px;
+              box-shadow: 0 0 8px rgba(52, 199, 89, 0.6);
+            "
+          ></span>
+          Live оновлення
+        </div>
 
-  <script>
-    (function () {
-      const el = document.getElementById('global-sync-counter');
+        <script>
+          (function () {
+            const el = document.getElementById('global-sync-counter');
 
-      function getSeedTarget() {
-        const d = new Date();
-        const seed = d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
-        // Рандомна ціль дня: від 140 до 170
-        const val = Math.abs(Math.sin(seed) * 30);
-        return Math.floor(140 + val);
-      }
-
-      function getSyncValue() {
-        const now = new Date();
-        const h = now.getHours();
-        const m = now.getMinutes();
-        const s = h * 3600 + m * 60 + now.getSeconds();
-        
-        const target = getSeedTarget();
-        
-        // 1. Умова 00:00 - 00:05 — завжди 0
-        if (h === 0 && m < 5) {
-          return 0;
-        }
-
-        let progress;
-        // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
-        if (s < 32400) {
-          const startS = 300; // 5 хвилин у секундах
-          progress = ((s - startS) / (32400 - startS)) * 0.15;
-        } 
-        // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
-        else if (s < 72000) {
-          const dayProgress = (s - 32400) / 39600;
-          // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
-          const jitter = Math.sin(s * 0.001) * 0.02; 
-          progress = 0.15 + (dayProgress + jitter) * 0.75;
-        } 
-        // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
-        else {
-          progress = 0.9 + ((s - 72000) / 14400) * 0.1;
-        }
-
-        // Фінальний розрахунок
-        let result = Math.floor(target * progress);
-        
-        // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
-        if (s >= 300 && result < 1) result = 1;
-        
-        return Math.max(0, result);
-      }
-
-      // Анімований старт при першому завантаженні
-      let targetValue = getSyncValue();
-      let currentDisplay = 0;
-      
-      // Якщо значень багато, анімуємо швидше, якщо мало — по одному
-      const animationSteps = targetValue > 0 ? 50 : 1;
-      const step = Math.ceil(targetValue / animationSteps) || 1;
-
-      const timer = setInterval(() => {
-        if (targetValue === 0) {
-          el.innerText = "0";
-          clearInterval(timer);
-        } else {
-          currentDisplay += step;
-          if (currentDisplay >= targetValue) {
-            el.innerText = targetValue;
-            clearInterval(timer);
-          } else {
-            el.innerText = currentDisplay;
-          }
-        }
-      }, 30);
-
-      // Запуск циклу оновлення
-      // Використовуємо перевірку кожні 2 секунди
-      setTimeout(() => {
-          setInterval(() => {
-            const newVal = getSyncValue();
-            const currentVal = parseInt(el.innerText);
-            // Тільки зростання
-            if (newVal > currentVal) {
-              el.innerText = newVal;
+            function getSeedTarget() {
+              const d = new Date();
+              const seed =
+                d.getFullYear() * 1000 + d.getMonth() * 100 + d.getDate();
+              // Рандомна ціль дня: від 140 до 170
+              const val = Math.abs(Math.sin(seed) * 30);
+              return Math.floor(140 + val);
             }
-          }, 2000);
-      }, 1500);
-      
-    })();
-  </script>
-</div>
+
+            function getSyncValue() {
+              const now = new Date();
+              const h = now.getHours();
+              const m = now.getMinutes();
+              const s = h * 3600 + m * 60 + now.getSeconds();
+
+              const target = getSeedTarget();
+
+              // 1. Умова 00:00 - 00:05 — завжди 0
+              if (h === 0 && m < 5) {
+                return 0;
+              }
+
+              let progress;
+              // 2. Період 00:05 - 09:00 (поступовий початок до 15% від цілі)
+              if (s < 32400) {
+                const startS = 300; // 5 хвилин у секундах
+                progress = ((s - startS) / (32400 - startS)) * 0.15;
+              }
+              // 3. ПЕРІОД АКТИВНОСТІ 09:00 - 20:00 (найшвидше зростання до 90%)
+              else if (s < 72000) {
+                const dayProgress = (s - 32400) / 39600;
+                // Додаємо нелінійність (Ease-in-out), щоб зростання було рандомнішим візуально
+                const jitter = Math.sin(s * 0.001) * 0.02;
+                progress = 0.15 + (dayProgress + jitter) * 0.75;
+              }
+              // 4. Вечір 20:00 - 23:59 (сповільнення до 100%)
+              else {
+                progress = 0.9 + ((s - 72000) / 14400) * 0.1;
+              }
+
+              // Фінальний розрахунок
+              let result = Math.floor(target * progress);
+
+              // Гарантуємо, що після 00:05 з'явиться мінімум 1 поліс
+              if (s >= 300 && result < 1) result = 1;
+
+              return Math.max(0, result);
+            }
+
+            // Анімований старт при першому завантаженні
+            let targetValue = getSyncValue();
+            let currentDisplay = 0;
+
+            // Якщо значень багато, анімуємо швидше, якщо мало — по одному
+            const animationSteps = targetValue > 0 ? 50 : 1;
+            const step = Math.ceil(targetValue / animationSteps) || 1;
+
+            const timer = setInterval(() => {
+              if (targetValue === 0) {
+                el.innerText = '0';
+                clearInterval(timer);
+              } else {
+                currentDisplay += step;
+                if (currentDisplay >= targetValue) {
+                  el.innerText = targetValue;
+                  clearInterval(timer);
+                } else {
+                  el.innerText = currentDisplay;
+                }
+              }
+            }, 30);
+
+            // Запуск циклу оновлення
+            // Використовуємо перевірку кожні 2 секунди
+            setTimeout(() => {
+              setInterval(() => {
+                const newVal = getSyncValue();
+                const currentVal = parseInt(el.innerText);
+                // Тільки зростання
+                if (newVal > currentVal) {
+                  el.innerText = newVal;
+                }
+              }, 2000);
+            }, 1500);
+          })();
+        </script>
+      </div>
 
       <section>
         <div class="container">
@@ -516,10 +531,15 @@
               />
               <h4 class="about-list-heading">Нам довіряють тисячі клієнтів</h4>
               <p>
-                Завдяки нашому сервісу тисячі водіїв оформили страховку швидко
-                та зручно. Ми цінуємо довіру кожного клієнта, гарантуючи чесні
-                ціни та миттєву реєстрацію поліса в базі МТСБУ. Відгуки наших
-                клієнтів <a style="display: inline" href="#reviews">тут</a>.
+                Завдяки нашому сервісу тисячі водіїв оформили поліс швидко та
+                зручно. Ми цінуємо довіру кожного клієнта, гарантуючи чесні ціни
+                та миттєву реєстрацію поліса в базі МТСБУ. Відгуки наших
+                клієнтів
+                <a
+                  style="display: inline; font-weight: bold; color: #6c80f1"
+                  href="#reviews"
+                  >тут</a
+                >.
               </p>
             </li>
             <li class="about-list-item fade-in-left top-gradient">
@@ -536,7 +556,11 @@
                 визнаючи E-Polis як надійного експерта у сфері
                 онлайн-страхування. Це підтверджує нашу прозорість та високий
                 рівень довіри серед клієнтів і медіа.
-                <a style="display: inline" href="#mass-media">Читати</a>
+                <a
+                  style="display: inline; font-weight: bold; color: #6c80f1"
+                  href="#mass-media"
+                  >Читати</a
+                >
               </p>
             </li>
             <li class="about-list-item fade-in-left top-gradient">
@@ -912,9 +936,130 @@
         </div>
       </section>
 
+      <!-- Секція "Експертний гід" -->
+      <section class="expert-guide">
+        <div class="container">
+          <h2>Як обрати надійну автоцивілку у 2026 році: поради експертів</h2>
+          <p>
+            На ринку страхування багато пропозицій, але важливо розуміти, що
+            саме ви купуєте. Команда E-Polis відповідає на головні питання
+            водіїв.
+          </p>
+
+          <!-- Schema.org FAQ -->
+          <div itemscope itemtype="https://schema.org/FAQPage">
+            <div
+              itemscope
+              itemprop="mainEntity"
+              itemtype="https://schema.org/Question"
+            >
+              <h3 itemprop="name">Чи існують зараз поліси з франшизою?</h3>
+              <div
+                itemscope
+                itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer"
+              >
+                <div itemprop="text">
+                  <p>
+                    Ні. Згідно з актуальними змінами в законодавстві,
+                    обов'язкове страхування цивільно-правової відповідальності
+                    (ОСЦПВ) в Україні тепер оформлюється
+                    <strong>без застосування франшизи</strong>. Це означає, що
+                    страхова компанія відшкодовує повну суму збитків потерпілому
+                    в межах ліміту відповідальності.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              itemscope
+              itemprop="mainEntity"
+              itemtype="https://schema.org/Question"
+            >
+              <h3 itemprop="name">
+                Чому важливо збільшити ліміт відповідальності (ДЦВ)?
+              </h3>
+              <div
+                itemscope
+                itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer"
+              >
+                <div itemprop="text">
+                  <p>
+                    Стандартного ліміту ОСЦПВ може не вистачити, якщо ви станете
+                    винуватцем ДТП за участю дорогого автомобіля або кількох
+                    транспортних засобів. Опція
+                    <strong>ДЦВ (добровільна цивільна відповідальність)</strong>
+                    дозволяє за невелику доплату розширити страхове покриття на
+                    суму до 500 000 грн і більше, захищаючи вас від фінансових
+                    ризиків.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              itemscope
+              itemprop="mainEntity"
+              itemtype="https://schema.org/Question"
+            >
+              <h3 itemprop="name">
+                Як перевірити надійність страхової компанії перед покупкою?
+              </h3>
+              <div
+                itemscope
+                itemprop="acceptedAnswer"
+                itemtype="https://schema.org/Answer"
+              >
+                <div itemprop="text">
+                  <p>
+                    Ми рекомендуємо звертати увагу на три фактори: рівень виплат
+                    (статистика МТСБУ), наявність послуги додаткового покриття
+                    та швидкість онлайн-сервісу. На E-Polis ми автоматично
+                    фільтруємо компанії з низьким рейтингом, залишаючи лише
+                    надійних партнерів.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Рекомендовані стилі (CSS) -->
+      <style>
+        .expert-guide {
+          padding: 40px 20px;
+          background-color: #f9fbfd;
+          border-radius: 12px;
+          margin: 20px 0;
+        }
+        .expert-guide h2 {
+          color: #2c3e50;
+          margin-bottom: 20px;
+        }
+        .expert-guide h3 {
+          font-size: 1.2rem;
+          color: #0056b3;
+          cursor: pointer;
+          margin-top: 25px;
+        }
+        .expert-guide p {
+          line-height: 1.6;
+          color: #4a4a4a;
+        }
+        strong {
+          color: #000;
+          font-weight: 600;
+        }
+      </style>
+
       <section class="how-to-use article">
         <div class="container">
-          <h2 class="descr-heading">Як оформити страховку на авто онлайн?</h2>
+          <h2 class="descr-heading">
+            Як оформити страховку на автомобіль онлайн?
+          </h2>
           <ul class="list how-to-use-list">
             <li class="how-to-use-list-item">
               <p class="how-to-use-num">1</p>
@@ -1015,7 +1160,7 @@
 
       <section class="insurance-types">
         <div class="container">
-          <h2 class="descr-heading">Які види страховки на авто існують</h2>
+          <h2 class="descr-heading">Які види страхування на авто існують</h2>
           <p>
             Страховка на авто — це обов'язкова і добровільна захисна міра для
             всіх водіїв. В Україні водії можуть оформити різні види страхування
@@ -1025,7 +1170,7 @@
           </p>
 
           <!-- Автоцивілка -->
-          <div class="insurance-type">
+          <div class="insurance-type top-gradient">
             <h3>Автоцивілка (ОСЦПВ)</h3>
             <p>
               Автоцивілка — обов'язковий вид страхування для всіх власників
@@ -1043,7 +1188,7 @@
           </div>
 
           <!-- КАСКО -->
-          <div class="insurance-type">
+          <div class="insurance-type top-gradient">
             <h3>КАСКО</h3>
             <p>
               КАСКО — добровільне страхування вашого авто від усіх видів
@@ -1062,7 +1207,7 @@
           </div>
 
           <!-- Зелена карта -->
-          <div class="insurance-type">
+          <div class="insurance-type top-gradient">
             <h3>Зелена карта</h3>
             <p>
               Зелена карта — міжнародна страховка на авто, обов'язкова при
@@ -1086,32 +1231,41 @@
       <section>
         <div class="container">
           <h2 class="descr-heading">
-            Страховка на авто онлайн — швидко, вигідно та офіційно
+            Автострахування онлайн: як оформити поліс швидко та без зайвих
+            витрат
           </h2>
+
           <p>
-            Страховка на авто — це обов’язковий документ, без якого неможливо
-            законно керувати автомобілем в Україні. Вона гарантує, що у разі ДТП
-            збитки, завдані третім особам, будуть компенсовані страховою
-            компанією. Оформлення поліса сьогодні стало максимально простим:
-            достатньо кількох кліків на нашому сайті
+            Автострахування допомагає захистити водія від значних фінансових
+            витрат у разі дорожньо-транспортної пригоди або інших
+            непередбачуваних ситуацій. Сьогодні оформити страховий поліс можна
+            повністю онлайн без відвідування офісу страхової компанії. Достатньо
+            вказати дані транспортного засобу, обрати відповідну пропозицію та
+            оплатити договір зручним способом.
+          </p>
+
+          <p>
+            На E-Polis доступне порівняння пропозицій від провідних страхових
+            компаній України. Це дозволяє швидко знайти оптимальний варіант за
+            ціною, рейтингом страховика та умовами страхового покриття.
           </p>
 
           <ul class="list how-to-use-list">
             <li class="how-to-use-list-item">
               <div class="how-to-use-txt-container">
-                <p class="how-to-use-txt">Що таке автострахування (ОСЦПВ)</p>
+                <p class="how-to-use-txt">Що покриває поліс автоцивілки</p>
+
                 <p class="how-to-use-descr">
-                  ОСЦПВ або автоцивілка — це вид страхування, який покриває
-                  відповідальність водія перед іншими учасниками дорожнього
-                  руху. Якщо сталася аварія, виплати отримає постраждала
-                  сторона, а не винуватець. Таким чином, страховка авто захищає
-                  вас від непередбачених фінансових витрат.
+                  ОСЦПВ є обов'язковим видом страхування для власників
+                  транспортних засобів в Україні. Поліс забезпечує відшкодування
+                  збитків потерпілим у разі ДТП, якщо водій визнаний винуватцем
+                  пригоди.
                 </p>
+
                 <p class="how-to-use-descr">
-                  На сайті E-Polis можна порівняти пропозиції від десятків
-                  страхових компаній і обрати найкращу ціну на страховку на
-                  авто. Сервіс працює цілодобово, а поліс надходить на email
-                  одразу після оплати.
+                  Наявність чинного договору допомагає уникнути значних витрат
+                  на компенсацію пошкодженого майна або шкоди здоров'ю інших
+                  учасників дорожнього руху.
                 </p>
               </div>
             </li>
@@ -1119,39 +1273,60 @@
             <li class="how-to-use-list-item">
               <div class="how-to-use-txt-container">
                 <p class="how-to-use-txt">
-                  Переваги оформлення страховки через E-Polis
+                  Від чого залежить вартість страхування автомобіля
                 </p>
+
+                <p class="how-to-use-descr">
+                  Ціна поліса визначається кількома факторами: типом
+                  транспортного засобу, об'ємом двигуна, місцем реєстрації
+                  власника, наявністю пільг та додаткових умов страхування.
+                </p>
+
+                <p class="how-to-use-descr">
+                  Онлайн-калькулятор дозволяє порівняти актуальні пропозиції
+                  різних страховиків та обрати найбільш вигідний варіант без
+                  додаткових комісій.
+                </p>
+              </div>
+            </li>
+
+            <li class="how-to-use-list-item">
+              <div class="how-to-use-txt-container">
+                <p class="how-to-use-txt">
+                  Переваги оформлення поліса через E-Polis
+                </p>
+
                 <ul>
                   <li>
                     <p class="how-to-use-descr">
-                      Офіційно та без посередників. Ми співпрацюємо лише з
-                      перевіреними страховими компаніями, що мають ліцензію НБУ.
+                      Порівняння цін від багатьох страхових компаній в одному
+                      місці.
                     </p>
                   </li>
+
                   <li>
                     <p class="how-to-use-descr">
-                      Найкраща ціна без промокодів. Усі знижки вже враховані у
-                      фінальній вартості — без прихованих комісій.
+                      Офіційна реєстрація договору в базі МТСБУ.
                     </p>
                   </li>
+
                   <li>
                     <p class="how-to-use-descr">
-                      Миттєве оформлення. Електронна страховка на авто
-                      створюється автоматично після введення даних і доступна
-                      для перевірки в базі МТСБУ.
+                      Можливість оформлення у будь-який час доби без
+                      відвідування офісу.
                     </p>
                   </li>
+
                   <li>
                     <p class="how-to-use-descr">
-                      Зручність і безпека. Оплата онлайн, підтримка 24/7 та
-                      збереження поліса у базі МТСБУ.
+                      Отримання електронного поліса одразу після оплати.
                     </p>
                   </li>
+
                   <li>
                     <p class="how-to-use-descr">
-                      Страховка авто оформлена онлайн має таку ж юридичну силу,
-                      як і паперовий документ. Її можна показати на екрані
-                      смартфона або роздрукувати за потреби.
+                      Підтримка клієнтів на всіх етапах оформлення та супроводу
+                      договору.
                     </p>
                   </li>
                 </ul>
@@ -1160,51 +1335,46 @@
 
             <li class="how-to-use-list-item">
               <div class="how-to-use-txt-container">
-                <p class="how-to-use-txt">Скільки коштує страховка на авто</p>
-                <p class="how-to-use-descr">
-                  Вартість залежить від об’єму двигуна, місця реєстрації, типу
-                  транспорту та наявності пільг. Але завдяки онлайн-порівнянню
-                  ви завжди бачите актуальні ціни від страхових компаній у
-                  режимі реального часу.
+                <p class="how-to-use-txt">
+                  Які види автострахування можна оформити онлайн
                 </p>
-                <p class="how-to-use-descr">
-                  На E-Polis можна купити страховку на авто дешевше, ніж у
-                  відділенні, адже сервіс не бере додаткових комісій.
-                </p>
-              </div>
-            </li>
 
-            <li class="how-to-use-list-item">
-              <div class="how-to-use-txt-container">
-                <p class="how-to-use-txt">Додаткові види автострахування</p>
                 <p class="how-to-use-descr">
-                  Крім обов’язкової автоцивілки, водії можуть оформити:
+                  Водіям доступні різні страхові продукти залежно від потреб та
+                  особливостей використання автомобіля.
                 </p>
+
                 <ul>
                   <li>
                     <p class="how-to-use-descr">
-                      КАСКО — покриття збитків власного авто у разі ДТП,
-                      викрадення або стихії;
+                      Автоцивілка — обов'язковий договір відповідальності водія.
                     </p>
                   </li>
+
                   <li>
                     <p class="how-to-use-descr">
-                      Зелену карту — поліс для виїзду за кордон;
+                      КАСКО — захист власного автомобіля від пошкодження,
+                      викрадення та інших ризиків.
                     </p>
                   </li>
+
                   <li>
                     <p class="how-to-use-descr">
-                      Добровільне страхування водія та пасажирів.
+                      Зелена карта — міжнародний страховий сертифікат для
+                      поїздок за кордон.
                     </p>
                   </li>
                 </ul>
+
                 <p class="how-to-use-descr">
-                  E-Polis допомагає оформити всі види автострахування онлайн, з
-                  офіційними документами та підтримкою на кожному етапі.
+                  Всі договори оформлюються дистанційно та мають таку ж юридичну
+                  силу, як і документи, отримані у відділенні страхової
+                  компанії.
                 </p>
               </div>
             </li>
           </ul>
+
           <button class="to-top-btn">Розрахувати вартість</button>
         </div>
       </section>
