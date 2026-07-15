@@ -55,28 +55,178 @@
 
     <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "E-polis — електронний поліс онлайн",
-  "url": "https://e-polis.net.ua/",
-  "description": "Швидке оформлення автоцивілки, Зеленої карти та КАСКО онлайн. Отримуйте поліс на імейл за 5 хвилин.",
-  "brand": {
-    "@type": "Brand",
-    "name": "E-polis"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "bestRating": "5",
-    "worstRating": "3",
-    "reviewCount": "325"
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "lowPrice": "557",
-    "highPrice": "15000",
-    "priceCurrency": "UAH"
-  }
+  "@context":"https://schema.org",
+  "@graph":[
+
+    {
+      "@type":"InsuranceAgency",
+      "@id":"https://e-polis.net.ua/#organization",
+      "name":"E-Polis - Сервіс онлайн страхування",
+      "url":"https://e-polis.net.ua/",
+      "logo":{
+        "@type":"ImageObject",
+        "url":"https://e-polis.net.ua/img/favicon-e-polis.jpeg"
+      },
+      "image":"https://www.e-polis.net.ua/fb-banner-new.webp",
+      "description":"Сервіс онлайн страхування де зібрані кращі пропозиції страхових компаній України",
+      "areaServed":{
+        "@type":"Country",
+        "name":"Україна"
+      },
+      "contactPoint":{
+        "@type":"ContactPoint",
+        "contactType":"customer support",
+        "availableLanguage":[
+          "uk",
+          "en"
+        ]
+      },
+      "aggregateRating":{
+        "@type":"AggregateRating",
+        "ratingValue":"5.0",
+        "reviewCount":"325",
+        "bestRating":"5"
+      },
+      "sameAs":[
+        "https://www.facebook.com/epolis.net.ua"
+      ]
+    },
+
+    {
+      "@type":"WebSite",
+      "@id":"https://e-polis.net.ua/#website",
+      "url":"https://e-polis.net.ua/",
+      "name":"E-Polis",
+      "publisher":{
+        "@id":"https://e-polis.net.ua/#organization"
+      },
+      "inLanguage":"uk-UA"
+    },
+
+    {
+      "@type":"WebPage",
+      "@id":"https://e-polis.net.ua/#webpage",
+      "url":"https://e-polis.net.ua/",
+      "name":"Сервіс онлайн страхування | Автоцивілка, Зелена картка, КАСКО | E-Polis",
+      "description":"Онлайн оформлення обов’язкових і добровільних видів страхування онлайн від кращих страхових компаній.",
+      "isPartOf":{
+        "@id":"https://e-polis.net.ua/#website"
+      },
+      "about":{
+        "@id":"https://e-polis.net.ua/#organization"
+      },
+      "breadcrumb":{
+        "@id":"https://e-polis.net.ua/#breadcrumb"
+      },
+      "primaryImageOfPage":{
+        "@type":"ImageObject",
+        "url":"https://www.e-polis.net.ua/fb-banner-new.webp"
+      },
+      "inLanguage":"uk-UA"
+    },
+
+    {
+      "@type":"BreadcrumbList",
+      "@id":"https://e-polis.net.ua/#breadcrumb",
+      "itemListElement":[
+        {
+          "@type":"ListItem",
+          "position":1,
+          "name":"Головна",
+          "item":"https://e-polis.net.ua/"
+        }
+      ]
+    },
+
+    {
+      "@type":"OfferCatalog",
+      "name":"Страхові послуги",
+      "itemListElement":[
+
+        {
+          "@type":"Offer",
+          "itemOffered":{
+            "@type":"Service",
+            "name":"Автоцивілка онлайн",
+            "provider":{
+              "@id":"https://e-polis.net.ua/#organization"
+            },
+            "areaServed":{
+              "@type":"Country",
+              "name":"Україна"
+            }
+          },
+          "priceSpecification":{
+            "@type":"PriceSpecification",
+            "price":"557",
+            "priceCurrency":"UAH"
+          }
+        },
+
+        {
+          "@type":"Offer",
+          "itemOffered":{
+            "@type":"Service",
+            "name":"Зелена картка",
+            "provider":{
+              "@id":"https://e-polis.net.ua/#organization"
+            },
+            "areaServed":{
+              "@type":"Country",
+              "name":"Україна"
+            }
+          }
+        },
+
+        {
+          "@type":"Offer",
+          "itemOffered":{
+            "@type":"Service",
+            "name":"КАСКО",
+            "provider":{
+              "@id":"https://e-polis.net.ua/#organization"
+            },
+            "areaServed":{
+              "@type":"Country",
+              "name":"Україна"
+            }
+          }
+        },
+
+        {
+          "@type":"Offer",
+          "itemOffered":{
+            "@type":"Service",
+            "name":"Туристичне страхування",
+            "provider":{
+              "@id":"https://e-polis.net.ua/#organization"
+            },
+            "areaServed":{
+              "@type":"Country",
+              "name":"Україна"
+            }
+          }
+        },
+
+        {
+          "@type":"Offer",
+          "itemOffered":{
+            "@type":"Service",
+            "name":"Страхування нерухомості",
+            "provider":{
+              "@id":"https://e-polis.net.ua/#organization"
+            },
+            "areaServed":{
+              "@type":"Country",
+              "name":"Україна"
+            }
+          }
+        }
+
+      ]
+    }
+
+  ]
 }
 </script>
 
