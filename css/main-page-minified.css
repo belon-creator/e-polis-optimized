@@ -350,6 +350,15 @@ img {
   flex-direction: column;
   margin-right: 8px;
 }
+.driver-and-passanger-bg-banner{
+   background-image:
+    url(../img/driver+passenger-ins.webp),
+    url(../img/autumn-removebg-preview.webp);
+  background-repeat: no-repeat, repeat;
+  background-position:
+    10px center,
+    top center;
+}
 .kasko-bg-banner {
   background-image:
     url(../img/img-for-kasko-remove-bg.webp),
